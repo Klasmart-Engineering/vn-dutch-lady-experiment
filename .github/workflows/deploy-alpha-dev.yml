@@ -20,9 +20,9 @@ jobs:
 #     needs: [install]
 #     uses: KL-Engineering/github-action-workflows/.github/workflows/npm-test-jest.yml@v3.1.0
 
-  lint:
-    needs: [install]
-    uses: KL-Engineering/github-action-workflows/.github/workflows/npm-lint.yml@v3.1.0
+  # lint:
+  #   needs: [install]
+  #   uses: KL-Engineering/github-action-workflows/.github/workflows/npm-lint.yml@v3.1.0
 
   build:
     needs: [install]
@@ -33,7 +33,7 @@ jobs:
       upload: true
 
   confirm-deployment:
-    needs: [lint,build]
+    needs: [build]
     runs-on: ubuntu-latest
     environment: alpha-dev
     steps:

@@ -26,7 +26,7 @@ jobs:
 
   build:
     needs: [install]
-    uses: ./.github/workflows/npm-build-upload-fe.yml@v2.1.0
+    uses: ./.github/workflows/npm-build-upload-fe.yml
     with:
       environment: alpha
       region: alpha

@@ -1,3 +1,6 @@
+import React from "react";
+import { useLocation } from "react-router-dom";
+
 export const px2vw = (px: number) => `${(px / 2560) * 100}vw`;
 
 export const noRepeat = (arr: LessonItem[]) => {
@@ -10,3 +13,8 @@ export const noRepeat = (arr: LessonItem[]) => {
   }
   return arr;
 };
+
+export function useQuery() {
+  const { search } = useLocation();
+  return React.useMemo(() => new URLSearchParams(search), [search]);
+}

@@ -1,9 +1,10 @@
 import { Box, Button, makeStyles, Typography, withStyles } from "@material-ui/core";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { pageLinks } from ".";
 import Header from "./components/Header";
 import { StmContext } from "./contexts";
+import { useQuery } from "./utils";
 import vw from "./utils/vw.macro";
 
 const data: ILessonData[] = [
@@ -190,7 +191,7 @@ const IconButton = withStyles({
   },
 })(Button);
 
-function LessonItem(props: ILessonData) {
+function LessonItem(props: ILessonData & {curriculum: string}) {
   const history = useHistory();
   const css = useStyles();
   const { setRootState, ...rootState } = useContext(StmContext);
@@ -201,7 +202,7 @@ function LessonItem(props: ILessonData) {
         top: props.top,
       }}
       onClick={() => {
-        history.push(pageLinks.lesson);
+        history.push(`${pageLinks.lesson}?curriculum=${props.curriculum}&classLevel=${props.level}&title=${props.title}`);
         setRootState &&
           setRootState({ ...rootState, classLevel: props.level as unknown as IContextState["classLevel"], title: props.title });
       }}
@@ -221,15 +222,28 @@ function LessonItem(props: ILessonData) {
   );
 }
 
+
+
 export default function SelectClassLevel() {
   const css = useStyles();
+  const [curriculum, setCurriculum] = useState('')
+  const query = useQuery();
+
+  React.useEffect(() => {
+    const curriculum = query.get("curriculum")
+    if (!curriculum) {
+      return
+    }
+    setCurriculum(curriculum as string)
+  }, [query])
+
   return (
     <Box className={css.root}>
       <Header prevLink="/stm/curriculum" />
       <Box className={css.mainContainer}>
         <Box className={css.itemContainer}>
           {data.map((d) => {
-            return <LessonItem key={d.level} {...d} />;
+            return <LessonItem key={d.level} {...d} curriculum={curriculum}/>;
           })}
         </Box>
       </Box>

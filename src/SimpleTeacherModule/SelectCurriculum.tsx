@@ -72,7 +72,7 @@ function CurriculumItem(props: { name: IContextState["curriculum"] }) {
   return (
     <IconButton
       onClick={() => {
-        history.push(pageLinks.level);
+        history.push(`${pageLinks.level}?curriculum=${props.name}`);
         setRootState && setRootState({ ...rootState, curriculum: props.name });
       }}
     >

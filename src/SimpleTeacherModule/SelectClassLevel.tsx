@@ -1,10 +1,10 @@
 import { Box, Button, makeStyles, Typography, withStyles } from "@material-ui/core";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { pageLinks } from ".";
 import Header from "./components/Header";
 import { StmContext } from "./contexts";
-import { useQuery } from "./utils";
+import useQuery from "./hooks/useQuery";
 import vw from "./utils/vw.macro";
 
 const data: ILessonData[] = [
@@ -191,7 +191,7 @@ const IconButton = withStyles({
   },
 })(Button);
 
-function LessonItem(props: ILessonData & {curriculum: string}) {
+function LessonItem(props: ILessonData & {curriculum: any}) {
   const history = useHistory();
   const css = useStyles();
   const { setRootState, ...rootState } = useContext(StmContext);
@@ -226,16 +226,15 @@ function LessonItem(props: ILessonData & {curriculum: string}) {
 
 export default function SelectClassLevel() {
   const css = useStyles();
-  const [curriculum, setCurriculum] = useState('')
   const query = useQuery();
+  const curriculum = query.get("curriculum");
+  const history = useHistory();
 
   React.useEffect(() => {
-    const curriculum = query.get("curriculum")
     if (!curriculum) {
-      return
+      return history.push('/error')
     }
-    setCurriculum(curriculum as string)
-  }, [query])
+  }, [history, curriculum])
 
   return (
     <Box className={css.root}>

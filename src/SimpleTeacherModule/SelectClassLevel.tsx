@@ -1,9 +1,10 @@
 import { Box, Button, makeStyles, Typography, withStyles } from "@material-ui/core";
-import React, { useContext } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { pageLinks } from ".";
 import Header from "./components/Header";
-import { StmContext } from "./contexts";
+import useQuery from "./hooks/useQuery";
+import { objToQueryString } from "./utils";
 import vw from "./utils/vw.macro";
 
 const data: ILessonData[] = [
@@ -193,17 +194,19 @@ const IconButton = withStyles({
 function LessonItem(props: ILessonData) {
   const history = useHistory();
   const css = useStyles();
-  const { setRootState, ...rootState } = useContext(StmContext);
-
+  const query = useQuery();
   return (
     <IconButton
       style={{
         top: props.top,
       }}
       onClick={() => {
-        history.push(pageLinks.lesson);
-        setRootState &&
-          setRootState({ ...rootState, classLevel: props.level as unknown as IContextState["classLevel"], title: props.title });
+        const params = {
+          level: props.level,
+          curriculum: query.get('curriculum'),
+          title: props.title
+        };
+        history.push(pageLinks.lesson + `?${objToQueryString(params)}`);
       }}
     >
       <Box className={css.itemLeve} style={{ background: props.color }}>

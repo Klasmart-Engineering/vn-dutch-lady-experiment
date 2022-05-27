@@ -12,8 +12,10 @@ import {
 } from '@material-ui/core';
 // import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import useQuery from './hooks/useQuery';
 // import { StmContext } from './contexts';
 import { pageLinks } from './index';
+import { objToQueryString } from './utils';
 import vw from './utils/vw.macro';
 
 const useStyles = makeStyles({
@@ -139,11 +141,18 @@ const IconButton = withStyles({
 export default function TeachingUnit(props: { list: LessonItem[] }) {
 	const css = useStyles();
 	let history = useHistory();
+	const query = useQuery();
 	// const { setRootState, ...rootState } = useContext(StmContext);
 	const handleClick = (payload: LessonItem) => {
 		// setRootState && setRootState({ ...rootState, planId: payload.id, lessonId: payload.no });
+		const params = {
+			planId: payload.id,
+			lessonId: payload.no,
+			level: query.get('level'),
+			curriculum: query.get('curriculum'),
+		}
 		history.push(
-			`${pageLinks.present}?planId=${payload.id}&lessonId=${payload.no}`
+			`${pageLinks.present}?${objToQueryString(params)}`
 		);
 	};
 

@@ -1,9 +1,8 @@
 import { Box, makeStyles } from '@material-ui/core';
-import React, { useContext } from 'react';
+import React from 'react';
 import PresentPlayer from './components/Player';
 import PresentList from './components/PresentList';
 import PresentNav from './components/PresentNav';
-import { StmContext } from './contexts';
 import { usePresentState, useVideoState } from './hooks/rootState';
 import { geLessonMaterials } from './utils/api';
 import useQuery from './hooks/useQuery';
@@ -20,17 +19,17 @@ export default function PresentActivity() {
 	const css = useStyles();
 	let query = useQuery();
 	const videoRef = React.useRef<HTMLVideoElement>(null);
-	const { curriculum, classLevel } = useContext(StmContext);
 	const { presentState, setPresentState } = usePresentState();
 	const { setVideoState } = useVideoState();
 	const { activeIndex = 0, isFullscreen = false } = presentState;
 	const [lessonMaterials, setLessonMaterials] = React.useState<IListItem[]>([]);
-	const planId = query.get('planId');
 	const lessonId = (query.get('lessonId') as unknown as number) || 1;
-
-	// debugger;
 	React.useEffect(() => {
-		const params: {} = { curriculum, classLevel };
+		const planId = query.get('planId');
+		const params: {} = {
+			curriculum: query.get('curriculum'),
+			classLevel: query.get('level'),
+		};
 		if (planId) {
 			geLessonMaterials(planId, params).then((data: IListItem[]) => {
 				setLessonMaterials(data);
@@ -42,7 +41,7 @@ export default function PresentActivity() {
 			});
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [planId, curriculum, classLevel]);
+	}, []);
 
 	const [name, thumbnail, data] = React.useMemo(() => {
 		if (lessonMaterials.length > 0) {

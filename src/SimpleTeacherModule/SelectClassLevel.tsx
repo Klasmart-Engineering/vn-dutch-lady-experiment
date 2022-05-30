@@ -1,10 +1,10 @@
 import { Box, Button, makeStyles, Typography, withStyles } from "@material-ui/core";
-import React, { useContext } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { pageLinks } from ".";
 import Header from "./components/Header";
-import { StmContext } from "./contexts";
 import useQuery from "./hooks/useQuery";
+import { objToQueryString } from "./utils";
 import vw from "./utils/vw.macro";
 
 const data: ILessonData[] = [
@@ -191,20 +191,22 @@ const IconButton = withStyles({
   },
 })(Button);
 
-function LessonItem(props: ILessonData & {curriculum: any}) {
+function LessonItem(props: ILessonData) {
   const history = useHistory();
   const css = useStyles();
-  const { setRootState, ...rootState } = useContext(StmContext);
-
+  const query = useQuery();
   return (
     <IconButton
       style={{
         top: props.top,
       }}
       onClick={() => {
-        history.push(`${pageLinks.lesson}?curriculum=${props.curriculum}&classLevel=${props.level}&title=${props.title}`);
-        setRootState &&
-          setRootState({ ...rootState, classLevel: props.level as unknown as IContextState["classLevel"], title: props.title });
+        const params = {
+          level: props.level,
+          curriculum: query.get('curriculum'),
+          title: props.title
+        };
+        history.push(pageLinks.lesson + `?${objToQueryString(params)}`);
       }}
     >
       <Box className={css.itemLeve} style={{ background: props.color }}>
@@ -226,15 +228,6 @@ function LessonItem(props: ILessonData & {curriculum: any}) {
 
 export default function SelectClassLevel() {
   const css = useStyles();
-  const query = useQuery();
-  const curriculum = query.get("curriculum");
-  const history = useHistory();
-
-  React.useEffect(() => {
-    if (!curriculum) {
-      return history.push('/error')
-    }
-  }, [history, curriculum])
 
   return (
     <Box className={css.root}>
@@ -242,7 +235,7 @@ export default function SelectClassLevel() {
       <Box className={css.mainContainer}>
         <Box className={css.itemContainer}>
           {data.map((d) => {
-            return <LessonItem key={d.level} {...d} curriculum={curriculum}/>;
+            return <LessonItem key={d.level} {...d}/>;
           })}
         </Box>
       </Box>

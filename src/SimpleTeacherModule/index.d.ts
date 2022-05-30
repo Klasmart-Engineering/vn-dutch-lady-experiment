@@ -106,3 +106,11 @@ interface IVideoPlayerProps {
   source: string;
   poster?: string;
 }
+
+interface ICurriculumItem{
+  id: string;
+  no: number;
+  name: string;
+  thumbnail: string;
+  description: string;
+}

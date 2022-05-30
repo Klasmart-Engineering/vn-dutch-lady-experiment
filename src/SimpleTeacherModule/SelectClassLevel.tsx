@@ -302,6 +302,7 @@ function LessonItem(props: ILessonData & {index: number} ) {
       onClick={() => {
         const params = {
           level: props.level,
+          levelId: props.id,
           curriculum: query.get('curriculum'),
           title: props.name
         };

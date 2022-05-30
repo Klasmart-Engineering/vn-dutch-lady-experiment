@@ -13,11 +13,13 @@ import {
 	useLayoutEffect,
 	useRef,
 } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { StmContext } from './contexts';
 import { pageLinks } from './index';
 import { noRepeat } from './utils/index';
 import vw from './utils/vw.macro';
+import useQuery from './hooks/useQuery';
+import { objToQueryString } from './utils';
 
 const useStyles = makeStyles({
 	lessonunitWrap: {
@@ -92,7 +94,16 @@ export default function LessonUnit(props: { list: ITeachingList[] }) {
 	const css = useStyles();
 	const { setRootState, ...rootState } = useContext(StmContext);
 	const needScrollEvent = useRef(true);
+	let history = useHistory();
+	const query = useQuery();
 	const handleLessonClick = (payload: LessonItem, unitNo: number) => {
+		const params = {
+			planId: payload.id,
+			lessonId: payload.no,
+			level: query.get('level'),
+			curriculum: query.get('curriculum'),
+		};
+		history.push(`${pageLinks.present}?${objToQueryString(params)}`);
 		var storage = window.localStorage;
 		let temp: LessonItem[] = [];
 		const pre = localStorage.getItem('selectPlan');
@@ -166,31 +177,28 @@ export default function LessonUnit(props: { list: ITeachingList[] }) {
 						<Box className={css.lessonunitWrap}>
 							{item.lesson_plans.map(
 								(lessonItem: LessonItem, lessonIndex: number) => (
-									<Link
-										className={css.linkWrap}
+									<Card
 										key={lessonIndex}
-										to={`${pageLinks.present}?planId=${lessonItem.id}&lessonId=${lessonItem.no}`}
+										className={css.lessonunit}
 										onClick={() => {
 											handleLessonClick(lessonItem, item.no);
 										}}
 									>
-										<Card className={css.lessonunit}>
-											<CardMedia
-												className={css.lessonPic}
-												component='img'
-												image={lessonItem.thumbnail}
-												title=''
-											/>
-											<CardContent className={css.content}>
-												<Typography className={css.lessonNo}>
-													Lesson {lessonItem.no}
-												</Typography>
-												<Typography className={css.lessonDesp} component='p'>
-													{lessonItem.name}
-												</Typography>
-											</CardContent>
-										</Card>
-									</Link>
+										<CardMedia
+											className={css.lessonPic}
+											component='img'
+											image={lessonItem.thumbnail}
+											title=''
+										/>
+										<CardContent className={css.content}>
+											<Typography className={css.lessonNo}>
+												Lesson {lessonItem.no}
+											</Typography>
+											<Typography className={css.lessonDesp} component='p'>
+												{lessonItem.name}
+											</Typography>
+										</CardContent>
+									</Card>
 								)
 							)}
 						</Box>

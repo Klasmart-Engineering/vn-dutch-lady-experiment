@@ -109,8 +109,8 @@ interface IVideoPlayerProps {
 
 interface ICurriculumItem{
   id: string;
-  no: number;
-  name: string;
-  thumbnail: string;
-  description: string;
+  name?: string;
+  thumbnail?: string;
+  description?: string;
+  levels?: ILessonData[];
 }

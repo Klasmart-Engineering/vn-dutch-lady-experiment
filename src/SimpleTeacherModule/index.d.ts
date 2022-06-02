@@ -122,3 +122,11 @@ interface ICurriculumItem{
   description?: string;
   levels?: ILessonData[];
 }
+
+interface ILessonPlan {
+  id: string;
+  name: string;
+  thumbnail?: string;
+  description?:string,
+  units:Array<IUnitState>
+}

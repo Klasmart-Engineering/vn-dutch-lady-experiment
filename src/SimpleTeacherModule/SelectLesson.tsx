@@ -1,10 +1,12 @@
 import { Box, Grid, makeStyles } from '@material-ui/core';
-import React, { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import Header from './components/Header';
 import UnitsSelector from './components/UnitsSeletor';
 import { StmContext } from './contexts';
 import LessonBox from './LessonBox';
 import vw from './utils/vw.macro';
+import useQuery from './hooks/useQuery';
+import { getLessonPlans } from './utils/api';
 
 const useStyles = makeStyles({
 	root: {
@@ -40,6 +42,7 @@ const useStyles = makeStyles({
 
 export default function SelectLesson() {
 	const css = useStyles();
+	const query = useQuery();
 	const [unit, setUnit] = useState<IUnitState>({
 		id: 'unit01',
 		name: '01',
@@ -53,6 +56,28 @@ export default function SelectLesson() {
 		setUnit(unit);
 	};
 
+	const [lessonPlans, setLessonPlans] = useState<IUnitState[]>([]);
+	useEffect(() => {
+		let levelId = query.get('levelId') || '';
+		let data = {
+			id: '',
+			name: '',
+			thumbnail: '',
+			description: '',
+			units: [],
+		};
+		const getLessons = async () => {
+			try {
+				data = await getLessonPlans(levelId);
+			} catch (error) {}
+			data.units.forEach((item: IUnitState, index: any) => {
+				item.no = index + 1;
+			});
+			setLessonPlans(data.units);
+		};
+		getLessons();
+	}, [query]);
+
 	return (
 		<Box className={css.root}>
 			<Header showTitle backgroudColor={'#43A1FF'} prevLink='/stm/level' />
@@ -61,7 +86,7 @@ export default function SelectLesson() {
 					<UnitsSelector chosenUnit={currentUnit} onChange={unitChange} />
 				</Box>
 				<Box id='lessonbox' className={css.lessonbox}>
-					<LessonBox unit={unit}></LessonBox>
+					<LessonBox data={lessonPlans} unit={unit}></LessonBox>
 				</Box>
 			</Grid>
 		</Box>

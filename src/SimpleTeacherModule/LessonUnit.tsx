@@ -90,7 +90,7 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function LessonUnit(props: { list: ITeachingList[] }) {
+export default function LessonUnit(props: { list: IUnitState[] }) {
 	const css = useStyles();
 	const { setRootState, ...rootState } = useContext(StmContext);
 	const needScrollEvent = useRef(true);
@@ -171,7 +171,7 @@ export default function LessonUnit(props: { list: ITeachingList[] }) {
 				.filter((item) => {
 					return item.lesson_plans.length > 0;
 				})
-				.map((item: ITeachingList, index: number) => (
+				.map((item: IUnitState, index: number) => (
 					<Box key={index} id={item.id}>
 						<Typography className={css.title}>{item.name}</Typography>
 						<Box className={css.lessonunitWrap}>

@@ -32,4 +32,8 @@ function getCurriculumData() {
   return axios.get(`/data/curriculums/curriculums.json`).then(res => res.data)
 }
 
-export { geUnits, getLessonPlan, geLessonMaterials, getCurriculumData };
+function getLessonPlans(level_id:string) {
+  return axios.get(`data/levels/${level_id}.json`).then(res => res.data)
+}
+
+export { geUnits, getLessonPlan, geLessonMaterials, getCurriculumData, getLessonPlans };

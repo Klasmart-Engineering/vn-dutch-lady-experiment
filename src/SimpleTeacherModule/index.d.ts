@@ -116,7 +116,7 @@ interface IVideoPlayerProps {
 }
 
 interface ICurriculumItem{
-  id: string;
+  id?: string;
   name?: string;
   thumbnail?: string;
   description?: string;

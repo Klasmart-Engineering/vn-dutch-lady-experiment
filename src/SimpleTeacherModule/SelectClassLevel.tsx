@@ -196,33 +196,34 @@ const IconButton = withStyles({
   },
 })(Button);
 
-function LessonItem(props: ILessonData & {index: number} ) {
+function LessonItem(props: ILessonData & {index: number, page: number} ) {
   const history = useHistory();
   const css = useStyles();
+  const { index, page, id, name } = props
 
   return (
     <IconButton
       style={{
-        top: styleDate[props.index].top,
+        top: styleDate[index].top,
       }}
       onClick={() => {
         const params = {
-          level: props.index + 1,
-          levelId: props.id,
-          title: props.name
+          level: (page - 1) * PAGESIZE + index + 1,
+          levelId: id,
+          title: name
         };
         history.push(pageLinks.lesson + `?${objToQueryString(params)}`);
       }}
     >
-      <Box className={css.itemLeve} style={{ background: styleDate[props.index].color }}>
+      <Box className={css.itemLeve} style={{ background: styleDate[index].color }}>
         <Typography className={css.itemLeveText1}>Level</Typography>
-        <Typography className={css.itemLeveText2}>{ props.index + 1 }</Typography>
+        <Typography className={css.itemLeveText2}>{ (page - 1) * PAGESIZE + index + 1 }</Typography>
       </Box>
       <Box className={css.itemImg}>
-        <img src={props.thumbnail} alt={String(props.index + 1)} />
+        <img src={props.thumbnail} alt={String((page - 1) * PAGESIZE + index + 1)} />
       </Box>
 
-      <Typography className={css.itemAge} style={{ color: styleDate[props.index].color }}>
+      <Typography className={css.itemAge} style={{ color: styleDate[index].color }}>
         {props.description}
       </Typography>
     </IconButton>
@@ -257,7 +258,7 @@ export default function SelectClassLevel() {
         <Box className={css.itemContainer}>
           {data.slice((page - 1) * PAGESIZE, (page - 1) * PAGESIZE + PAGESIZE)
           .map((d: ILessonData, index) => {
-            return <LessonItem key={d.id} {...d} index={index}/>;
+            return <LessonItem key={d.id} {...d} index={index} page={page}/>;
           })}
         </Box>
         {page !== 1 && <ChevronLeftRounded 

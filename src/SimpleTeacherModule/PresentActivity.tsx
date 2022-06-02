@@ -27,7 +27,6 @@ export default function PresentActivity() {
 	React.useEffect(() => {
 		const planId = query.get('planId');
 		const params: {} = {
-			curriculum: query.get('curriculum'),
 			classLevel: query.get('level'),
 		};
 		if (planId) {

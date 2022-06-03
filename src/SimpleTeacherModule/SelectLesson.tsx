@@ -55,10 +55,9 @@ export default function SelectLesson() {
 		rootState.scrollTo?.(unit.id);
 		setUnit(unit);
 	};
-
 	const [lessonPlans, setLessonPlans] = useState<IUnitState[]>([]);
+	let levelId = query.get('levelId') || '';
 	useEffect(() => {
-		let levelId = query.get('levelId') || '';
 		let data = {
 			id: '',
 			name: '',
@@ -72,11 +71,16 @@ export default function SelectLesson() {
 			} catch (error) {}
 			data.units.forEach((item: IUnitState, index: any) => {
 				item.no = index + 1;
+				item.lesson_plans.forEach(
+					(lessonItem: LessonItem, lessonItemIndex: any) => {
+						lessonItem.no = lessonItemIndex + 1;
+					}
+				);
 			});
 			setLessonPlans(data.units);
 		};
 		getLessons();
-	}, [query]);
+	}, [levelId]);
 
 	return (
 		<Box className={css.root}>

@@ -13,7 +13,6 @@ import {
 // import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 // import { StmContext } from './contexts';
-import useQuery from './hooks/useQuery';
 import { pageLinks } from './index';
 import { objToQueryString } from './utils';
 import vw from './utils/vw.macro';
@@ -141,7 +140,6 @@ const IconButton = withStyles({
 export default function TeachingUnit(props: { list: LessonItem[] }) {
 	const css = useStyles();
 	let history = useHistory();
-	const query = useQuery();
 	const handleClick = (payload: LessonItem) => {
 		// const { setRootState, ...rootState } = useContext(StmContext);
 		// setRootState && setRootState({ ...rootState, planId: payload.id, lessonId: payload.no });

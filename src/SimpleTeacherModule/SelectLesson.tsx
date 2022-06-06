@@ -99,7 +99,7 @@ export default function SelectLesson() {
 			setLessonPlans(data.units);
 		};
 		getLessons();
-	}, [levelId]);
+	}, [history, level, levelId]);
 
 	const handleScroll = useCallback(() => {
 		if (!needScrollEvent.current) {
@@ -108,7 +108,7 @@ export default function SelectLesson() {
 		}
 		const scrollEle = document.getElementById('lessonbox');
 		const scrollY = scrollEle?.scrollTop || 0;
-		if (scrollY == 0) {
+		if (scrollY === 0) {
 			setRootState?.({
 				...rootState,
 				currentUnit: '1',
@@ -134,7 +134,7 @@ export default function SelectLesson() {
 				}
 			}
 		}
-	}, [setRootState, rootState]);
+	}, [setRootState, rootState, lessonPlans]);
 
 	useLayoutEffect(() => {
 		const scrollEle = document.getElementById('lessonbox');

@@ -10,7 +10,6 @@ import { useHistory } from 'react-router-dom';
 import { pageLinks } from './index';
 import { noRepeat } from './utils/index';
 import vw from './utils/vw.macro';
-import useQuery from './hooks/useQuery';
 import { objToQueryString } from './utils';
 const useStyles = makeStyles({
 	lessonunitWrap: {
@@ -83,7 +82,6 @@ const useStyles = makeStyles({
 export default function LessonUnit(props: { list: IUnitState[] }) {
 	const css = useStyles();
 	let history = useHistory();
-	const query = useQuery();
 	const handleLessonClick = (payload: LessonItem, unitNo: number) => {
 		const params = {
 			planId: payload.id,

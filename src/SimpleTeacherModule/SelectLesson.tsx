@@ -14,6 +14,7 @@ import LessonBox from './LessonBox';
 import vw from './utils/vw.macro';
 import useQuery from './hooks/useQuery';
 import { getLessonPlans } from './utils/api';
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles({
 	root: {
@@ -50,6 +51,7 @@ const useStyles = makeStyles({
 export default function SelectLesson() {
 	const css = useStyles();
 	const query = useQuery();
+	const history = useHistory();
 	const { setRootState, ...rootState } = useContext(StmContext);
 	const needScrollEvent = useRef(true);
 	const { currentUnit } = rootState;
@@ -63,9 +65,14 @@ export default function SelectLesson() {
 			unit && scrollTo(unit.unitId);
 		}
 	};
+	const [headerTitle, setHeaderTitle] = useState('');
 	const [lessonPlans, setLessonPlans] = useState<IUnitState[]>([]);
-	let levelId = query.get('levelId') || '';
+	let levelId = query.get('levelId');
+	let level = query.get('level');
 	useEffect(() => {
+		if (!levelId || !level) {
+			history.push(`/error?msg='Invalid Params error'`);
+		}
 		let data = {
 			id: '',
 			name: '',
@@ -75,28 +82,20 @@ export default function SelectLesson() {
 		};
 		const getLessons = async () => {
 			try {
-				data = await getLessonPlans(levelId);
-			} catch (error) {}
-			// data.units.forEach((item: IUnitState, index: any) => {
-			// 	item.no = index + 1;
-			// 	item.unitId = index + 1 + '';
-			// 	item.lesson_plans.forEach(
-			// 		(lessonItem: LessonItem, lessonItemIndex: any) => {
-			// 			lessonItem.no = lessonItemIndex + 1;
-			// 		}
-			// 	);
-			// });
-			let arr: IUnitState[] = [];
-			let arrData: IUnitState[] = data.units;
-			let arrayLength = arrData.length;
-			for (let i = 0; i < arrayLength; i++) {
-				arr[i] = arrData[i];
-				arr[i].no = i + 1;
-				arr[i].unitId = i + 1 + '';
-				for (let j = 0; j < arrData[i].lesson_plans.length; j++) {
-					arr[i].lesson_plans[j].no = j + 1;
-				}
+				data = levelId && (await getLessonPlans(levelId));
+				setHeaderTitle(data.name);
+			} catch (error) {
+				history.push(`/error?msg='Invalid Params error'`);
 			}
+			data.units.forEach((item: IUnitState, index: any) => {
+				item.no = index + 1;
+				item.unitId = index + 1 + '';
+				item.lesson_plans.forEach(
+					(lessonItem: LessonItem, lessonItemIndex: any) => {
+						lessonItem.no = lessonItemIndex + 1;
+					}
+				);
+			});
 			setLessonPlans(data.units);
 		};
 		getLessons();
@@ -109,6 +108,12 @@ export default function SelectLesson() {
 		}
 		const scrollEle = document.getElementById('lessonbox');
 		const scrollY = scrollEle?.scrollTop || 0;
+		if (scrollY == 0) {
+			setRootState?.({
+				...rootState,
+				currentUnit: '1',
+			});
+		}
 		const parentHeightHalf =
 			(scrollEle?.getBoundingClientRect().height ?? 0) / 2;
 		if (scrollY) {
@@ -143,7 +148,12 @@ export default function SelectLesson() {
 
 	return (
 		<Box className={css.root}>
-			<Header showTitle backgroudColor={'#43A1FF'} prevLink='/stm/level' />
+			<Header
+				title={headerTitle}
+				showTitle
+				backgroudColor={'#43A1FF'}
+				prevLink='/stm/level'
+			/>
 			<Grid className={css.container}>
 				<Box className={css.unitSelector}>
 					<UnitsSelector

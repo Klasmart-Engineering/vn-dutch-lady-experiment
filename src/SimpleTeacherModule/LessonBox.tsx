@@ -54,7 +54,9 @@ export default function LessonBox(prop: {
 			{showTeach && (
 				<Box className={css.teachingWrap}>
 					<Typography className={css.title}>Continue Teaching</Typography>
-					<TeachingUnit list={state.teachingList}></TeachingUnit>
+					{state.teachingList && (
+						<TeachingUnit list={state.teachingList}></TeachingUnit>
+					)}
 				</Box>
 			)}
 			<LessonUnit list={state.lessonPlans}></LessonUnit>

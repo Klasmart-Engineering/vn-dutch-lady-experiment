@@ -87,6 +87,7 @@ export default function LessonUnit(props: { list: IUnitState[] }) {
 	const handleLessonClick = (payload: LessonItem, unitNo: number) => {
 		const params = {
 			planId: payload.id,
+			lessonId: payload.no,
 		};
 		history.push(`${pageLinks.present}?${objToQueryString(params)}`);
 		var storage = window.localStorage;

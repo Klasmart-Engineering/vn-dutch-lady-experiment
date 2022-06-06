@@ -147,6 +147,7 @@ export default function TeachingUnit(props: { list: LessonItem[] }) {
 		// setRootState && setRootState({ ...rootState, planId: payload.id, lessonId: payload.no });
 		const params = {
 			planId: payload.id,
+			lessonId: payload.no,
 		};
 		history.push(`${pageLinks.present}?${objToQueryString(params)}`);
 	};

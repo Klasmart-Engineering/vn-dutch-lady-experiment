@@ -199,7 +199,7 @@ const IconButton = withStyles({
 function LessonItem(props: ILessonData & {index: number, page: number} ) {
   const history = useHistory();
   const css = useStyles();
-  const { index, page, id, name } = props
+  const { index, page, id } = props
 
   return (
     <IconButton
@@ -210,7 +210,6 @@ function LessonItem(props: ILessonData & {index: number, page: number} ) {
         const params = {
           level: (page - 1) * PAGESIZE + index + 1,
           levelId: id,
-          title: name
         };
         history.push(pageLinks.lesson + `?${objToQueryString(params)}`);
       }}
@@ -237,15 +236,18 @@ export default function SelectClassLevel() {
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
   const query = useQuery();
+  const history = useHistory();
   const curriculumId = query.get("curriculum");
 
   React.useEffect(() => {
-    if (!curriculumId) return;
+    if (!curriculumId) return history.push('/error');
     getCurriculumData().then(res => {
-      const levels = res.find((item: ICurrentData) => item.id === curriculumId).levels
+      const curriculum = res.find((item: ICurrentData) => item.id === curriculumId) 
+      if(!curriculum) return history.push('/error');
+      const levels = curriculum.levels
       setData(levels)
-    })
-  }, [curriculumId])
+    }).catch(() => history.push('/error'))
+  }, [curriculumId, history])
 
   const handleChangePage = (page: number) => {
     setPage(page)

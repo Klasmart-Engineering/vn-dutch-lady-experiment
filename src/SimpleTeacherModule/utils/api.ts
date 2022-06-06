@@ -28,4 +28,12 @@ function geLessonMaterials(planid: string, params: Params = {}) {
   return axios.get(`${basicPath}/lesson_plan/${planid}/lesson_materials.json?${generateURLParams(params)}`).then((res) => res.data);
 }
 
-export { geUnits, getLessonPlan, geLessonMaterials };
+function getCurriculumData() {
+  return axios.get(`/data/curriculums/curriculums.json`).then(res => res.data)
+}
+
+function getLessonPlans(level_id:string) {
+  return axios.get(`data/levels/${level_id}.json`).then(res => res.data)
+}
+
+export { geUnits, getLessonPlan, geLessonMaterials, getCurriculumData, getLessonPlans };

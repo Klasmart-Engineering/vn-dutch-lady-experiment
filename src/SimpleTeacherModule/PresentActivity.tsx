@@ -26,12 +26,8 @@ export default function PresentActivity() {
 	const lessonId = (query.get('lessonId') as unknown as number) || 1;
 	React.useEffect(() => {
 		const planId = query.get('planId');
-		const params: {} = {
-			curriculum: query.get('curriculum'),
-			classLevel: query.get('level'),
-		};
 		if (planId) {
-			geLessonMaterials(planId, params).then((data: IListItem[]) => {
+			geLessonMaterials(planId).then((data: IListItem[]) => {
 				setLessonMaterials(data);
 				setPresentState({
 					activeIndex: 0,

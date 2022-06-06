@@ -24,8 +24,8 @@ function getLessonPlan(params: Params = {}) {
   return axios.get(`${basicPath}/units.json?${generateURLParams(params)}`).then((res) => res.data);
 }
 
-function geLessonMaterials(planid: string, params: Params = {}) {
-  return axios.get(`${basicPath}/lesson_plan/${planid}/lesson_materials.json?${generateURLParams(params)}`).then((res) => res.data);
+function geLessonMaterials(planid: string) {
+  return axios.get(`data/lesson_plans/${planid}.json`).then((res) => res.data.materials);
 }
 
 function getCurriculumData() {

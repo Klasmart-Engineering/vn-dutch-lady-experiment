@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 	},
 });
 export default function LessonBox(prop: {
-	unit: IUnitState;
+	// unit: IUnitState;
 	data: IUnitState[];
 }) {
 	const css = useStyles();

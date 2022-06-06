@@ -79,6 +79,7 @@ interface IPlayerProps {
 }
 
 interface IUnitState {
+  unitId: string;
   id: string;
   name: string;
   no: number;

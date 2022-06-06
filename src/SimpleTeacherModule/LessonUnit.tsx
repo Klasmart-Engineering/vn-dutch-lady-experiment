@@ -6,21 +6,12 @@ import {
 	makeStyles,
 	Typography,
 } from '@material-ui/core';
-import {
-	useCallback,
-	useContext,
-	useEffect,
-	useLayoutEffect,
-	useRef,
-} from 'react';
 import { useHistory } from 'react-router-dom';
-import { StmContext } from './contexts';
 import { pageLinks } from './index';
 import { noRepeat } from './utils/index';
 import vw from './utils/vw.macro';
 import useQuery from './hooks/useQuery';
 import { objToQueryString } from './utils';
-
 const useStyles = makeStyles({
 	lessonunitWrap: {
 		display: 'flex',
@@ -89,11 +80,8 @@ const useStyles = makeStyles({
 		marginBottom: vw(19),
 	},
 });
-
 export default function LessonUnit(props: { list: IUnitState[] }) {
 	const css = useStyles();
-	const { setRootState, ...rootState } = useContext(StmContext);
-	const needScrollEvent = useRef(true);
 	let history = useHistory();
 	const query = useQuery();
 	const handleLessonClick = (payload: LessonItem, unitNo: number) => {
@@ -118,52 +106,6 @@ export default function LessonUnit(props: { list: IUnitState[] }) {
 		}
 		storage.setItem('selectPlan', JSON.stringify(temp));
 	};
-	const handleScroll = useCallback(() => {
-		if (!needScrollEvent.current) {
-			needScrollEvent.current = true;
-			return;
-		}
-		const scrollEle = document.getElementById('lessonbox');
-		const scrollY = scrollEle?.scrollTop || 0;
-		const parentHeightHalf =
-			(scrollEle?.getBoundingClientRect().height ?? 0) / 2;
-		if (scrollY) {
-			for (let index = 0; index < props.list.length; index++) {
-				const itemEl = document.getElementById(props.list[index].id);
-				const targetUnitScrollHeight = itemEl?.offsetTop || 0;
-				const itemSelfHeight = itemEl?.getBoundingClientRect().height ?? 0;
-				if (
-					(targetUnitScrollHeight - scrollY < parentHeightHalf &&
-						targetUnitScrollHeight - scrollY > 0) ||
-					itemSelfHeight + targetUnitScrollHeight > scrollY + parentHeightHalf
-				) {
-					setRootState?.({ ...rootState, currentUnit: props.list[index].id });
-					break;
-				}
-			}
-		}
-	}, [props, setRootState, rootState]);
-
-	const scrollTo = useCallback((unitId: string) => {
-		const element = document.getElementById(unitId || '');
-		needScrollEvent.current = false;
-		element && (element as HTMLElement).scrollIntoView();
-	}, []);
-
-	useEffect(() => {
-		setRootState?.({ ...rootState, scrollTo });
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
-
-	useLayoutEffect(() => {
-		const scrollEle = document.getElementById('lessonbox');
-		if (scrollEle) {
-			scrollEle.addEventListener('scroll', handleScroll);
-		}
-		return () => {
-			scrollEle && scrollEle.removeEventListener('scroll', handleScroll);
-		};
-	}, [handleScroll]);
 
 	return (
 		<Box>
@@ -172,7 +114,7 @@ export default function LessonUnit(props: { list: IUnitState[] }) {
 					return item.lesson_plans.length > 0;
 				})
 				.map((item: IUnitState, index: number) => (
-					<Box key={index} id={item.id}>
+					<Box key={index} id={item.unitId}>
 						<Typography className={css.title}>{item.name}</Typography>
 						<Box className={css.lessonunitWrap}>
 							{item.lesson_plans.map(

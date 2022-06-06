@@ -1,5 +1,12 @@
 import { Box, Grid, makeStyles } from '@material-ui/core';
-import { useContext, useState, useEffect } from 'react';
+import {
+	useContext,
+	useState,
+	useEffect,
+	useCallback,
+	useLayoutEffect,
+	useRef,
+} from 'react';
 import Header from './components/Header';
 import UnitsSelector from './components/UnitsSeletor';
 import { StmContext } from './contexts';
@@ -43,17 +50,18 @@ const useStyles = makeStyles({
 export default function SelectLesson() {
 	const css = useStyles();
 	const query = useQuery();
-	const [unit, setUnit] = useState<IUnitState>({
-		id: 'unit01',
-		name: '01',
-		no: 1,
-		lesson_plans: [],
-	});
 	const { setRootState, ...rootState } = useContext(StmContext);
+	const needScrollEvent = useRef(true);
 	const { currentUnit } = rootState;
-	const unitChange = (unit: IUnitState) => {
-		rootState.scrollTo?.(unit.id);
-		setUnit(unit);
+	const scrollTo = useCallback((unitId: string) => {
+		const element = document.getElementById(unitId || '');
+		needScrollEvent.current = false;
+		element && (element as HTMLElement).scrollIntoView();
+	}, []);
+	const unitChange = (unit: IUnitState, isJump: boolean) => {
+		if (isJump) {
+			unit && scrollTo(unit.unitId);
+		}
 	};
 	const [lessonPlans, setLessonPlans] = useState<IUnitState[]>([]);
 	let levelId = query.get('levelId') || '';
@@ -69,28 +77,83 @@ export default function SelectLesson() {
 			try {
 				data = await getLessonPlans(levelId);
 			} catch (error) {}
-			data.units.forEach((item: IUnitState, index: any) => {
-				item.no = index + 1;
-				item.lesson_plans.forEach(
-					(lessonItem: LessonItem, lessonItemIndex: any) => {
-						lessonItem.no = lessonItemIndex + 1;
-					}
-				);
-			});
+			// data.units.forEach((item: IUnitState, index: any) => {
+			// 	item.no = index + 1;
+			// 	item.unitId = index + 1 + '';
+			// 	item.lesson_plans.forEach(
+			// 		(lessonItem: LessonItem, lessonItemIndex: any) => {
+			// 			lessonItem.no = lessonItemIndex + 1;
+			// 		}
+			// 	);
+			// });
+			let arr: IUnitState[] = [];
+			let arrData: IUnitState[] = data.units;
+			let arrayLength = arrData.length;
+			for (let i = 0; i < arrayLength; i++) {
+				arr[i] = arrData[i];
+				arr[i].no = i + 1;
+				arr[i].unitId = i + 1 + '';
+				for (let j = 0; j < arrData[i].lesson_plans.length; j++) {
+					arr[i].lesson_plans[j].no = j + 1;
+				}
+			}
 			setLessonPlans(data.units);
 		};
 		getLessons();
 	}, [levelId]);
+
+	const handleScroll = useCallback(() => {
+		if (!needScrollEvent.current) {
+			needScrollEvent.current = true;
+			return;
+		}
+		const scrollEle = document.getElementById('lessonbox');
+		const scrollY = scrollEle?.scrollTop || 0;
+		const parentHeightHalf =
+			(scrollEle?.getBoundingClientRect().height ?? 0) / 2;
+		if (scrollY) {
+			for (let index = 0; index < lessonPlans.length; index++) {
+				const itemEl = document.getElementById(lessonPlans[index].unitId);
+				const targetUnitScrollHeight = itemEl?.offsetTop || 0;
+				const itemSelfHeight = itemEl?.getBoundingClientRect().height ?? 0;
+				if (
+					(targetUnitScrollHeight - scrollY < parentHeightHalf &&
+						targetUnitScrollHeight - scrollY > 0) ||
+					itemSelfHeight + targetUnitScrollHeight > scrollY + parentHeightHalf
+				) {
+					setRootState?.({
+						...rootState,
+						currentUnit: lessonPlans[index].unitId,
+					});
+					break;
+				}
+			}
+		}
+	}, [setRootState, rootState]);
+
+	useLayoutEffect(() => {
+		const scrollEle = document.getElementById('lessonbox');
+		if (scrollEle) {
+			scrollEle.addEventListener('scroll', handleScroll);
+		}
+		return () => {
+			scrollEle && scrollEle.removeEventListener('scroll', handleScroll);
+		};
+	}, [handleScroll]);
 
 	return (
 		<Box className={css.root}>
 			<Header showTitle backgroudColor={'#43A1FF'} prevLink='/stm/level' />
 			<Grid className={css.container}>
 				<Box className={css.unitSelector}>
-					<UnitsSelector chosenUnit={currentUnit} onChange={unitChange} />
+					<UnitsSelector
+						data={lessonPlans}
+						chosenUnit={currentUnit}
+						onChange={unitChange}
+					/>
 				</Box>
 				<Box id='lessonbox' className={css.lessonbox}>
-					<LessonBox data={lessonPlans} unit={unit}></LessonBox>
+					<LessonBox data={lessonPlans}></LessonBox>
 				</Box>
 			</Grid>
 		</Box>

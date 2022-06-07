@@ -240,13 +240,13 @@ export default function SelectClassLevel() {
   const curriculumId = query.get("curriculum");
 
   React.useEffect(() => {
-    if (!curriculumId) return history.push('/error');
+    if (!curriculumId) return history.push(`/error?msg=${encodeURIComponent('required curriculumId param')}`);
     getCurriculumData().then(res => {
       const curriculum = res.find((item: ICurrentData) => item.id === curriculumId) 
-      if(!curriculum) return history.push('/error');
+      if(!curriculum) return history.push(`/error?msg=${encodeURIComponent('Invalid Params error')}`);
       const levels = curriculum.levels
       setData(levels)
-    }).catch(() => history.push('/error'))
+    }).catch(() => history.push(`/error?msg=${encodeURIComponent('Invalid Params error')}`))
   }, [curriculumId, history])
 
   const handleChangePage = (page: number) => {

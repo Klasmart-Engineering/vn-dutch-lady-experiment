@@ -4,6 +4,7 @@ import React from "react";
 import { usePresentState } from "../hooks/rootState";
 import vw from "../utils/vw.macro";
 import MediaControl from "./MediaControl";
+import PDFDisplay from "./PdfDisplay/PDFDisplay";
 import Video from "./Video";
 
 const useStyles = makeStyles({
@@ -99,6 +100,7 @@ const PresentPlayer = React.forwardRef<HTMLVideoElement, IPlayerProps>((props, v
   const { data, name, thumbnail, lessonNo } = props;
 
   const isImage = data.file_type === 1;
+  const isDocument = data.file_type === 4;
   const isVideo = data.file_type === 2;
   const isAudio = data.file_type === 3;
   const isMedia = isVideo || isAudio;
@@ -144,6 +146,8 @@ const PresentPlayer = React.forwardRef<HTMLVideoElement, IPlayerProps>((props, v
             src={`${data.source.startsWith("http") ? data.source : `//live.kidsloop.live/h5p/play/${data.source}`}`}
           />
         )}
+        {isDocument && (
+        <PDFDisplay src={data.source} />)}
       </Box>
       {isMedia && (
         <Box

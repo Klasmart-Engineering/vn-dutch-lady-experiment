@@ -65,7 +65,7 @@ const useStyles = makeStyles({
     position: "absolute",
     width: "100%",
     height: "100%",
-    "& > video": {
+    "& > video,img": {
       width: "100%",
       height: "100%",
       background: "#000000",
@@ -98,6 +98,7 @@ const PresentPlayer = React.forwardRef<HTMLVideoElement, IPlayerProps>((props, v
   const { presentState } = usePresentState();
   const { data, name, thumbnail, lessonNo } = props;
 
+  const isImage = data.file_type === 1;
   const isVideo = data.file_type === 2;
   const isAudio = data.file_type === 3;
   const isMedia = isVideo || isAudio;
@@ -128,9 +129,16 @@ const PresentPlayer = React.forwardRef<HTMLVideoElement, IPlayerProps>((props, v
             <Video ref={videoRef} poster={thumbnail} source={data.source} />
           </Box>
         )}
-        {(data.file_type === 5 || data.file_type === 100) && (
+        {
+          isImage && (
+            <Box className={css.videoContainer}>
+              <img src={data.source} alt={name} />
+            </Box>
+          )
+        }
+        {(data.file_type === 5  || data.file_type === 6 || data.file_type === 100) && (
           <iframe
-            title={name}
+            title={name}  
             className={css.playerIframe}
             sandbox="allow-same-origin allow-scripts"
             src={`${data.source.startsWith("http") ? data.source : `//live.kidsloop.live/h5p/play/${data.source}`}`}

@@ -65,11 +65,11 @@ export default function SelectLesson() {
 	};
 	const [headerTitle, setHeaderTitle] = useState('');
 	const [lessonPlans, setLessonPlans] = useState<IUnitState[]>([]);
-	const [levelId, level] = useQueryParams(["levelId", "level"]);
+	const [levelId, level] = useQueryParams(['levelId', 'level']);
 	const goErrorPage = usePageValidation();
 	useEffect(() => {
 		if (!levelId || !level) {
-			goErrorPage("levelId or level are required");
+			goErrorPage('levelId or level are required');
 			return;
 		}
 		let data = {
@@ -96,10 +96,9 @@ export default function SelectLesson() {
 			} catch (error) {
 				goErrorPage();
 			}
-
 		};
 		getLessons();
-	// eslint-disable-next-line react-hooks/exhaustive-deps
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [level, levelId]);
 
 	const handleScroll = useCallback(() => {
@@ -109,27 +108,36 @@ export default function SelectLesson() {
 		}
 		const scrollEle = document.getElementById('lessonbox');
 		const scrollY = scrollEle?.scrollTop || 0;
+		const scrollHeight = scrollEle?.scrollHeight || 0;
+		const clientHeight = scrollEle?.clientHeight || 0;
+		const parentHeightHalf =
+			(scrollEle?.getBoundingClientRect().height ?? 0) / 2;
+
 		if (scrollY === 0) {
 			setRootState?.({
 				...rootState,
 				currentUnit: '1',
 			});
 		}
-		const parentHeightHalf =
-			(scrollEle?.getBoundingClientRect().height ?? 0) / 2;
 		if (scrollY) {
 			for (let index = 0; index < lessonPlans.length; index++) {
 				const itemEl = document.getElementById(lessonPlans[index].unitId);
 				const targetUnitScrollHeight = itemEl?.offsetTop || 0;
 				const itemSelfHeight = itemEl?.getBoundingClientRect().height ?? 0;
 				if (
-					(targetUnitScrollHeight - scrollY < parentHeightHalf &&
-						targetUnitScrollHeight - scrollY > 0) ||
-					itemSelfHeight + targetUnitScrollHeight > scrollY + parentHeightHalf
+					targetUnitScrollHeight - scrollY >
+					parentHeightHalf - itemSelfHeight
 				) {
 					setRootState?.({
 						...rootState,
 						currentUnit: lessonPlans[index].unitId,
+					});
+					break;
+				}
+				if (scrollHeight - scrollY <= clientHeight + 1) {
+					setRootState?.({
+						...rootState,
+						currentUnit: lessonPlans[lessonPlans.length - 1].unitId,
 					});
 					break;
 				}

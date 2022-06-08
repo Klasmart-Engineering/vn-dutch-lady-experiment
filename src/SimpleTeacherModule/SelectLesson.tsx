@@ -111,7 +111,7 @@ export default function SelectLesson() {
 		const scrollHeight = scrollEle?.scrollHeight || 0;
 		const clientHeight = scrollEle?.clientHeight || 0;
 		const parentHeightHalf =
-			(scrollEle?.getBoundingClientRect().height ?? 0) / 2;
+			(scrollEle?.getBoundingClientRect().height ?? 0) / 4;
 
 		if (scrollY === 0) {
 			setRootState?.({

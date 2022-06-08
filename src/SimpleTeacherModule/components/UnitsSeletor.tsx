@@ -76,7 +76,8 @@ const useStyles = makeStyles({
 	},
 	arrow: {
 		zIndex: 2,
-		width: vw(132),
+		// width: vw(132),
+		width: '100%',
 		height: vw(132),
 		position: 'absolute',
 		display: 'flex',
@@ -218,7 +219,7 @@ export default function UnitsSelector(props: Props) {
 									<Box className={clsx(css.item, css.blank)}></Box>
 								</SwiperSlide>
 							</Swiper>
-						</Box>
+						{/* </Box> */}
 						<Box
 							className={clsx(
 								css.arrow,
@@ -246,6 +247,7 @@ export default function UnitsSelector(props: Props) {
 							>
 								<ExpandMoreRoundedIcon />
 							</Button>
+						</Box>
 						</Box>
 					</>
 				);

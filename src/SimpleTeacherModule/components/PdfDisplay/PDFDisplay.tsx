@@ -1,12 +1,10 @@
 import { Box, makeStyles, Tooltip, Typography } from "@material-ui/core";
 import React, { useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import zoomInFilledIcon from "../../../assets/icons/zoom-in-filled.svg";
 import zoomInIcon from "../../../assets/icons/zoom-in.svg";
 import zoomOutFilledIcon from "../../../assets/icons/zoom-out-filled.svg";
 import zoomOutIcon from "../../../assets/icons/zoom-out.svg";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 const scrollbarWidth = 10;
 const scrollbarHeight = 10;

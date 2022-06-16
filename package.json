@@ -9,6 +9,7 @@
     "@visx/responsive": "^1.1.0",
     "axios": "^0.24.0",
     "clsx": "^1.1.1",
+    "firebase": "^9.8.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-pdf": "^5.7.2",
@@ -29,6 +30,7 @@
   },
   "scripts": {
     "start": "react-app-rewired start",
+    "alpha": "cross-env NODE_ENV=alpha  BUILD_PATH=dist react-app-rewired build",
     "build": "cross-env NODE_ENV=production  BUILD_PATH=dist react-app-rewired build"
   },
   "eslintConfig": {

@@ -6,8 +6,10 @@ import React, { Suspense } from "react";
 import {
   HashRouter as Router,
   Switch,
-  Route
+  Route,
+  useLocation
 } from "react-router-dom";
+import firebase from "../firebase";
 import { intialState, intialVideoState, StmContext, VideoContext } from "./contexts";
 
 const PresentActivity = React.lazy(() => import("./PresentActivity"));
@@ -23,9 +25,27 @@ enum pageLinks {
   present = "/present",
 }
 
+
+function RouterListener(){
+  const location = useLocation();
+  React.useEffect(() => {
+    firebase.logEvent('page_view' ,{
+      page_path: location.pathname.replace("/", ""),
+      search: location.search.replace("?", ""),
+    })
+  }, [location]);
+  return null;
+}
+
+
 export default function Stm() {
   const [rootState, setRootState] = React.useState<IContextState>(intialState);
   const [videoState, setVideoState] = React.useState<IVideoState>(intialVideoState);
+
+ 
+
+
+
   return (
     <StmContext.Provider
       value={{
@@ -35,7 +55,9 @@ export default function Stm() {
     >
       <Suspense fallback={<CircularProgress />}>
         <Router>
+          <RouterListener />
           <Switch>
+         
             <Route exact path={pageLinks.curriculum}>
               <SelectCurriculum />
             </Route>

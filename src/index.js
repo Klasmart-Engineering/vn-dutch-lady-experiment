@@ -2,10 +2,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "./firebase"
 import './index.css';
 import Stm from './SimpleTeacherModule/index.tsx';
 import reportWebVitals from './reportWebVitals';
-
 
 
 ReactDOM.render(

@@ -1,0 +1,22 @@
+{
+    "id": "d3a4590c-6cd0-4f38-8f6c-aab95ae85f6b",
+    "name": "Bài 1",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 4-5",
+    "units": [
+        {
+            "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+            "name": "Bài 1",
+            "thumbnail": "",
+            "description": "",
+            "lesson_plans": [
+                {
+                    "id": "62a9972f36befd378340d5bc",
+                    "name": "Bài 1",
+                    "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5d6f514632be80564843.jpg",
+                    "description": "Students will learn the steps that lead to bedtime."
+                }
+            ]
+        }
+    ]
+}

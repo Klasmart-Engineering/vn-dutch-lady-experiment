@@ -1,0 +1,52 @@
+{
+    "id": "b20df2f3-16c0-4a37-81e2-290a3efdfb60",
+    "name": "Bada Rhyme",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 4-5",
+    "units": [
+      {
+        "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+        "name": "Unit A. Tái Chế",
+        "thumbnail": "",
+        "description": "",
+        "lesson_plans": [
+          {
+            "id": "5fd01b8719c96568d20ac4c5",
+            "name": "Lesson 1",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5d6f514632be80564843.jpg",
+            "description": "Students will learn the steps that lead to bedtime."
+          },
+          {
+            "id": "62aa998d3dd24f61688ae910",
+            "name": "Lesson 2",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5d853c218adac3cab065.jpg",
+            "description": "Students will learn the steps that lead to bedtime."
+          },
+          {
+            "id": "606d13ee3402f28e4e934f43",
+            "name": "Lesson 3",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5db6c850260ac9d0f596.jpg",
+            "description": "Students will learn repetition and patterns in a nursery rhyme."
+          },
+          {
+            "id": "606d143c74945ce9b0d233b6",
+            "name": "Lesson 4",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5ddb3c218adac3cab093.jpg",
+            "description": "Students will learn repetition and patterns in a nursery rhyme."
+          },
+          {
+            "id": "5fd01b8719c96568d20ac4c5",
+            "name": "Lesson 5",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5df31224468ff40758b9.jpg",
+            "description": "Students will learn the steps that lead to bedtime."
+          },
+          {
+            "id": "606419680a770f2a0d9477db",
+            "name": "Lesson 6",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5e08f07b2a0d6f60263e.jpg",
+            "description": "Students will learn the steps that lead to bedtime."
+          }
+        ]
+      }
+    ]
+  }

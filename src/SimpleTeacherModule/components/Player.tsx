@@ -140,10 +140,10 @@ const PresentPlayer = React.forwardRef<HTMLVideoElement, IPlayerProps>((props, v
         }
         {(data.file_type === 5  || data.file_type === 6 || data.file_type === 100) && (
           <iframe
-            title={name}  
+            title={name}
             className={css.playerIframe}
             sandbox="allow-same-origin allow-scripts"
-            src={`${data.source.startsWith("http") ? data.source : `//live.kidsloop.live/h5p/play/${data.source}`}`}
+            src={`${data.source.startsWith("http") ? data.source : `//live.kidsloop.vn/h5p/play/${data.source}`}`}
           />
         )}
         {isDocument && (

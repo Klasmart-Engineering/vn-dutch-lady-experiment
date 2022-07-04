@@ -1,5 +1,5 @@
 {
-    "id": "62a9972f36befd378340d5bc",
+    "id": "62a9972f36befd378340d5bc-v2",
     "name": "Bài 1",
     "thumbnail": "https://cdn.kidsloop.vn/thumbnail/624e5d6f514632be80564843.jpg",
     "description": "Bài 1.",
@@ -7,16 +7,16 @@
         {
             "id": "62a6ed8481e064ba40cec735",
             "name": "Transition slide - Chào mừng đến với lớp học",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ad5836befd37833f67f3.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b5858be2dcbc04192c559b.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ad5b81e064ba40ce9f82.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b5858e36befd3783468383.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6ad3636befd37833f67da",
             "name": "Transition slide - Cùng làm quen nhé",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ad3d6f1339995317dab1.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b585ac36befd378346839f.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ad4081e064ba40ce9f6f.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b585af985a87a5f4808d4e.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6ebd9e2dcbc04192558d0",
@@ -28,23 +28,23 @@
         {
             "id": "62a6ad1c36befd37833f67c6",
             "name": "Transition slide - Sẵn sàng học thôi",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ad2236befd37833f67cb.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b585c8e2dcbc04192c55d6.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ad256f1339995317da9f.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b585cde2dcbc04192c55da.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6eb2d81e064ba40cec56c",
             "name": "DL Level 1 L1 LM1",
             "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ac07e2dcbc0419252e12.png",
             "description": "",
-            "data": "{\"source\": \"assets/62a6bf1e81e064ba40ceaf37.mp4\", \"file_type\": 2, \"input_source\": 2}"
+            "data": "{\"source\": \"assets/62b140bfe2dcbc04192a46d8.mp4\", \"file_type\": 2, \"input_source\": 2}"
         },
         {
             "id": "62a6acff81e064ba40ce9f45",
             "name": "Transition slide - Hãy cùng học nào",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ad06e2dcbc0419252e9d.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b58525e2dcbc04192c554f.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ad0936befd37833f67b8.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b5852936befd3783468335.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a9627a81e064ba40cff3ef",
@@ -56,23 +56,23 @@
         {
             "id": "62a6ace181e064ba40ce9f31",
             "name": "Transition slide - Các em làm tốt lắm",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6aceb58401968b2d0a8cf.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b584f4e2dcbc04192c5510.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6acefe2dcbc0419252e8d.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b58505e2dcbc04192c5524.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6ab3d81e064ba40ce9e50",
             "name": "Transition slide - Bí quyết từ Cô gái Hà Lan",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ab446f1339995317d997.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b5864936befd378346840f.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ab4781e064ba40ce9e57.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b58650e2dcbc04192c5632.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6abc4e2dcbc0419252dea",
             "name": "Bí quyết từ Cô gái Hà Lan - Video 1",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6abd958401968b2d0a83b.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b904a936befd378348066a.png",
             "description": "",
-            "data": "{\"source\": \"assets/62a6a07736befd37833f61d1.mp4\", \"file_type\": 2, \"input_source\": 2}"
+            "data": "{\"source\": \"assets/62b90425e2dcbc04192ddbc3.mp4\", \"file_type\": 2, \"input_source\": 2}"
         },
         {
             "id": "62a98ff381e064ba40d00a81",
@@ -84,30 +84,30 @@
         {
             "id": "62a6aca158401968b2d0a8a5",
             "name": "Transition slide - Các em rất giỏi",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6acac81e064ba40ce9f14.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b584cce2dcbc04192c54e5.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6acb058401968b2d0a8af.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b584d0e2dcbc04192c54e7.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a99405e2dcbc0419269dca",
             "name": "DL Level 1 L1 LM4",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6eaf658401968b2d0cf99.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b1406036befd3783447b6e.png",
             "description": "",
-            "data": "{\"source\": \"62a99640b714bc0181fd31a0\", \"file_type\": 5, \"input_source\": 1}"
+            "data": "{\"source\": \"62b140393ec3051342365ce6\", \"file_type\": 5, \"input_source\": 1}"
         },
         {
             "id": "62a6ace181e064ba40ce9f31",
             "name": "Transition slide - Các em làm tốt lắm",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6aceb58401968b2d0a8cf.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b584f4e2dcbc04192c5510.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6acefe2dcbc0419252e8d.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b58505e2dcbc04192c5524.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6ac1ae2dcbc0419252e20",
             "name": "Transition slide - Hãy cùng thảo luận",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ac2458401968b2d0a86b.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b585f1e2dcbc04192c55f7.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ac28e2dcbc0419252e2a.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b585f636befd37834683db.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a96399e2dcbc0419268557",
@@ -119,9 +119,9 @@
         {
             "id": "62a6aca158401968b2d0a8a5",
             "name": "Transition slide - Các em rất giỏi",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6acac81e064ba40ce9f14.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b584cce2dcbc04192c54e5.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6acb058401968b2d0a8af.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b584d0e2dcbc04192c54e7.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a9964a81e064ba40d00df0",
@@ -133,9 +133,9 @@
         {
             "id": "62a6ace181e064ba40ce9f31",
             "name": "Transition slide - Các em làm tốt lắm",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6aceb58401968b2d0a8cf.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b584f4e2dcbc04192c5510.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6acefe2dcbc0419252e8d.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b58505e2dcbc04192c5524.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a703b736befd37833f9e14",
@@ -147,9 +147,9 @@
         {
             "id": "62a6ab3d81e064ba40ce9e50",
             "name": "Transition slide - Bí quyết từ Cô gái Hà Lan",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ab446f1339995317d997.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b5864936befd378346840f.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ab4781e064ba40ce9e57.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b58650e2dcbc04192c5632.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6b81e6f1339995317e4d5",
@@ -163,28 +163,28 @@
             "name": "DL Level 1 L1 LM8",
             "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6bb166f1339995317e922.png",
             "description": "",
-            "data": "{\"source\": \"62a9999445176ba5038c1ca0\", \"file_type\": 5, \"input_source\": 1}"
+            "data": "{\"source\": \"62b58776ffc3d81afae4eeb4\", \"file_type\": 5, \"input_source\": 1}"
         },
         {
             "id": "62a6ab2381e064ba40ce9e3c",
             "name": "Transition slide - Tuyệt vời",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6ab2b81e064ba40ce9e41.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b58692985a87a5f4808e01.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6ab2d58401968b2d0a7df.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b58697e2dcbc04192c5660.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6ee486f13399953180560",
             "name": "DL Level 1 L1 LM9",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6aac736befd37833f666e.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b5856b985a87a5f4808d0d.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6aacb6f1339995317d93f.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b58572985a87a5f4808d13.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6aae5e2dcbc0419252d64",
             "name": "Transition slide - Hẹn các em ở bài học sau",
-            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62a6aaef6f1339995317d958.png",
+            "thumbnail": "https://cdn.kidsloop.vn/thumbnail/62b584a6985a87a5f4808c4f.png",
             "description": "",
-            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62a6aaf36f1339995317d95c.png\", \"file_type\": 1, \"input_source\": 2}"
+            "data": "{\"source\": \"https://cdn.kidsloop.vn/assets/62b584ac985a87a5f4808c53.png\", \"file_type\": 1, \"input_source\": 2}"
         },
         {
             "id": "62a6bec236befd37833f7771",

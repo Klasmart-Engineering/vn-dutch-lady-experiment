@@ -27,7 +27,7 @@ const useStyles = makeStyles({
 		justifyContent: 'center',
 		flexDirection: 'column',
 		margin: `${vw(9)} 0`,
-		fontFamily: 'RooneySans',
+		fontFamily: 'Nunito',
 		fontWeight: 800,
 		fontVariantNumeric: 'lining-nums',
 		fontFeatureSettings: 'tnum',
@@ -198,8 +198,8 @@ export default function UnitsSelector(props: Props) {
 													onClick={() => changeChosenIndex(index, true)}
 													className={clsx(css.item, css.selected)}
 												>
-													<Box fontSize={vw(25)}>Unit</Box>
-													<Box>{dibit(item.no)}</Box>
+													<Box fontSize={vw(25)}>Lớp</Box>
+													<Box>{item.no}</Box>
 												</Button>
 											</SwiperSlide>
 										);
@@ -210,7 +210,7 @@ export default function UnitsSelector(props: Props) {
 												onClick={() => changeChosenIndex(index, true)}
 												className={clsx(css.item, css.unselected)}
 											>
-												{dibit(item.no)}
+												{item.no}
 											</Button>
 										</SwiperSlide>
 									);

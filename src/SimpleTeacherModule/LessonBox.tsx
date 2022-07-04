@@ -7,13 +7,13 @@ import vw from './utils/vw.macro';
 const useStyles = makeStyles({
 	lessonWrap: {
 		padding: `${vw(68)} 0 0 ${vw(40)}`,
-		fontFamily: 'RooneySans',
+		fontFamily: 'Nunito',
 	},
 	teachingWrap: {
 		marginBottom: vw(48),
 	},
 	title: {
-		fontFamily: 'RooneySans',
+		fontFamily: 'Nunito',
 		fontWeight: 'bold',
 		color: '#333333',
 		fontSize: vw(27),
@@ -53,7 +53,7 @@ export default function LessonBox(prop: {
 		<Box className={css.lessonWrap}>
 			{showTeach && (
 				<Box className={css.teachingWrap}>
-					<Typography className={css.title}>Continue Teaching</Typography>
+					<Typography className={css.title}>Bài đang dạy</Typography>
 					{state.teachingList && (
 						<TeachingUnit list={state.teachingList}></TeachingUnit>
 					)}

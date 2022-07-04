@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     fontSize: vw(69),
     lineHeight: vw(86),
     paddingBottom: vw(54),
-    fontFamily: "RooneySans, sans-serif",
+    fontFamily: "Nunito, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -79,7 +79,7 @@ function CurriculumItem(props: { item: ICurriculumItem }) {
         history.push(pageLinks.level + `?curriculum=` + props.item.id);
       }}
     >
-      <img src={props.item.thumbnail} alt={props.item.name} />
+      <img src={props.item.thumbnail} alt={props.item.name} style={{borderRadius: `${vw(50)} ${vw(20)} ${vw(50)}  ${vw(50)}`}} />
     </IconButton>
   );
 }
@@ -93,7 +93,7 @@ export default function SelectCurriculum() {
   return (
     <Box className={css.root}>
       <Typography className={css.title} variant="h3">
-        Select your curriculum
+        Chương trình Giáo dục Dinh dưỡng
       </Typography>
       <Box className={clsx(css.itemContainer, curriculumData.length === 4 && css.itemContainerWrap)}>
         {curriculumData.map(item => (

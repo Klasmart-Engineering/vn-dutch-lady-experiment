@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     justifyContent: "space-between",
   },
   playerTitle: {
-    fontFamily: "RooneySans, sans-serif",
+    fontFamily: "Nunito, sans-serif",
     fontWeight: "bold",
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -46,7 +46,7 @@ const useStyles = makeStyles({
     paddingRight: vw(34),
     background: "#6B9BFC",
     borderRadius: vw(50),
-    fontFamily: "RooneySans, sans-serif",
+    fontFamily: "Nunito, sans-serif",
     fontWeight: "bold",
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -115,7 +115,7 @@ const PresentPlayer = React.forwardRef<HTMLVideoElement, IPlayerProps>((props, v
       {!presentState.isFullscreen && (
         <Box className={css.playerTop}>
           <Typography variant="h5" className={css.playerTitle}>
-            <b>Lesson {lessonNo}.</b> {name}
+            <b>Bài {lessonNo}.</b> {name}
           </Typography>
           <Box className={css.playerProgress}>{progress}</Box>
         </Box>

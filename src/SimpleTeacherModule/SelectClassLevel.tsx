@@ -17,7 +17,7 @@ import vw from "./utils/vw.macro";
 const PAGESIZE = 5;
 const styleData = [
   {
-    color: "#c572ff",
+    color: "#19a0f4",
     top: vw(22),
   },
   {
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: vw(62),
-    fontFamily: "rooneysansbold, sans-serif",
+    fontFamily: "Nunito, sans-serif",
     color: "#fff",
   },
   itemContainer: {
@@ -75,14 +75,14 @@ const useStyles = makeStyles({
     transform: "translateY(-50%)",
     width: vw(100),
     height: vw(100),
-    color: "rgba(0,0,0, .5)", 
+    color: "rgba(0,0,0, .5)",
     background: "#fff",
     borderRadius: "50%",
     opacity: 0.6,
   },
   leftStyle: {
     left: "3%",
-  }, 
+  },
   rightStyle: {
     right: "3%",
   },
@@ -125,7 +125,7 @@ const useStyles = makeStyles({
     lineHeight: vw(69),
     paddingTop: vw(20),
     textAlign: "center",
-    fontFamily: "RooneySans-Black, sans-serif",
+    fontFamily: "Nunito Black, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -140,7 +140,7 @@ const useStyles = makeStyles({
     lineHeight: vw(305),
     paddingTop: vw(36),
     textAlign: "center",
-    fontFamily: "RooneySans, sans-serif",
+    fontFamily: "Nunito, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -166,7 +166,7 @@ const useStyles = makeStyles({
     right: vw(32),
     fontSize: vw(42),
     lineHeight: vw(52),
-    fontFamily: "RooneySans, sans-serif",
+    fontFamily: "Nunito, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -216,16 +216,16 @@ function LessonItem(props: ILessonData & {index: number, page: number} ) {
       }}
     >
       <Box className={css.itemLeve} style={{ background: styleData[index].color }}>
-        <Typography className={css.itemLeveText1}>Level</Typography>
+        <Typography className={css.itemLeveText1}>Lớp</Typography>
         <Typography className={css.itemLeveText2}>{ (page - 1) * PAGESIZE + index + 1 }</Typography>
       </Box>
       <Box className={css.itemImg}>
         <img src={props.thumbnail} alt={String((page - 1) * PAGESIZE + index + 1)} />
       </Box>
 
-      <Typography className={css.itemAge} style={{ color: styleData[index].color }}>
+      {/* <Typography className={css.itemAge} style={{ color: styleData[index].color }}>
         {props.description}
-      </Typography>
+      </Typography> */}
     </IconButton>
   );
 }
@@ -240,17 +240,16 @@ export default function SelectClassLevel() {
   const [curriculumId] = useQueryParams(["curriculum"]);
 
   React.useEffect(() => {
- 
     if(!curriculumId) {
       goErrorPage( 'curriculumId is required');
       return;
     }
 
     getCurriculumData().then(res => {
-      const curriculum = res.find((item: ICurrentData) => item.id === curriculumId) 
+      const curriculum = res.find((item: ICurrentData) => item.id === curriculumId)
       const levels = curriculum.levels
       setData(levels)
-    }).catch(() => goErrorPage(('curriculumId is invalid'))); 
+    }).catch(() => goErrorPage(('curriculumId is invalid')));
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [curriculumId])
 
@@ -264,12 +263,12 @@ export default function SelectClassLevel() {
             return <LessonItem key={d.id} {...d} index={index} page={page}/>;
           })}
         </Box>
-        {page !== 1 && <ChevronLeftRounded 
+        {page !== 1 && <ChevronLeftRounded
           className={clsx(css.buttonStyle, css.leftStyle)}
           onClick={() => setPage(page - 1)}
         /> }
         {data.length !== 0 && page !== Math.ceil(data.length / PAGESIZE)
-        && <ChevronRightRounded 
+        && <ChevronRightRounded
           className={clsx(css.buttonStyle, css.rightStyle)}
           onClick={() => setPage(page + 1)}
         />}

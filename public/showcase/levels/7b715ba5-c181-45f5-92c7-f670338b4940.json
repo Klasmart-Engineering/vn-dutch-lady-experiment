@@ -1,0 +1,64 @@
+{
+    "id": "7b715ba5-c181-45f5-92c7-f670338b4940",
+    "name": "Level 3",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 6-7",
+    "units": [
+        {
+            "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+            "name": "KLVN Phonics Showcase",
+            "thumbnail": "",
+            "description": "",
+            "lesson_plans": [
+                {
+                    "id": "6284c28152c08c2215299b56",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 1 Diagnostic Long A - ai & ay",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d47459f5ecd25bbabd63c.png"
+                },
+                {
+                    "id": "6284c2a16faf12fa98661eca",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 2 Review Consonants 1",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d47630974eeb8e00ceabe.png"
+                },
+                {
+                    "id": "6284c2c432ee9b2315c63410",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 3 Review Consonants 2",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d477e946cbd5a53536288.png"
+                },
+                {
+                    "id": "6284c2ea6faf12fa98661f03",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 4 Review Magic E",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d479f946cbd5a535362ab.png"
+                },
+                {
+                    "id": "6284c30b6faf12fa98661f1b",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 5 Long A - ay",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d47ba0974eeb8e00ceb22.png"
+                },
+                {
+                    "id": "6284c32c52c08c2215299bd9",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 6 Long A - ai",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d47e20974eeb8e00ceb43.png"
+                },
+                {
+                    "id": "6284c34b52c08c2215299bef",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 7 Word Builder Long A",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d47fa946cbd5a53536303.png"
+                },
+                {
+                    "id": "6284c36d9827bb28d39511f7",
+                    "name": "KLVN Phonics Showcase Level 3 Lesson 8 Storytime - A rainy day",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d48139f5ecd25bbabd714.png"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "id": "dedfdb29-563a-4e98-a06b-fd14931f0db2",
+    "name": "Level 2",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 5-6",
+    "units": [
+        {
+            "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+            "name": "KLVN Phonics Showcase",
+            "thumbnail": "",
+            "description": "",
+            "lesson_plans": [
+                {
+                    "id": "6284c16052c08c2215299a92",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 1 Diagnostic Magic E",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45680974eeb8e00ce89c.png"
+                },
+                {
+                    "id": "6284c181f819817211db13eb",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 2 Review Short Vowels",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d457b946cbd5a5353605e.png"
+                },
+                {
+                    "id": "6284c1a8f819817211db1407",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 3 Magic E a_e",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d458f9f5ecd25bbabd498.png"
+                },
+                {
+                    "id": "6284c1d5f819817211db1426",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 4 Magic E i_e",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45a4946cbd5a535360c0.png"
+                },
+                {
+                    "id": "6284c1f86faf12fa98661e4e",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 5 Magic E o_e",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45b7946cbd5a535360eb.png"
+                },
+                {
+                    "id": "6284c21b9827bb28d39510fd",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 6 Magic E u_e",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45cc946cbd5a5353610b.png"
+                },
+                {
+                    "id": "6284c241f819817211db146a",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 7 Review Magic E",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45dd0974eeb8e00ce998.png"
+                },
+                {
+                    "id": "6284c25dd1b35f2bdd34ec53",
+                    "name": "KLVN Phonics Showcase Level 2 Lesson 8 Storytime - The cat and rat chase",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d469c119c985a5f8f2635.png"
+                }
+            ]
+        }
+    ]
+}

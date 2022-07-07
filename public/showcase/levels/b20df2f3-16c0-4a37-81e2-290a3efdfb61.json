@@ -1,0 +1,64 @@
+{
+    "id": "b20df2f3-16c0-4a37-81e2-290a3efdfb61",
+    "name": "Level 1",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 4-5",
+    "units": [
+        {
+            "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+            "name": "KLVN Phonics Showcase",
+            "thumbnail": "",
+            "description": "",
+            "lesson_plans": [
+                {
+                    "id": "6284c04af819817211db1256",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 1 Diagnostic Short Vowels",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45b9119c985a5f8f255e.png"
+                },
+                {
+                    "id": "6284c075f819817211db1272",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 2 Letter A",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45a79f5ecd25bbabd4d0.png"
+                },
+                {
+                    "id": "6284c09a32ee9b2315c6328a",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 3 Letter E",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45969f5ecd25bbabd4b2.png"
+                },
+                {
+                    "id": "6284c0bed1b35f2bdd34eb3a",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 4 Letter I",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d4585946cbd5a53536079.png"
+                },
+                {
+                    "id": "6284c0dff819817211db12b3",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 5 Letter O",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d4572946cbd5a53536046.png"
+                },
+                {
+                    "id": "6284c10132ee9b2315c632d0",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 6 Letter U",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d455b119c985a5f8f2484.png"
+                },
+                {
+                    "id": "6284c1269827bb28d3951056",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 7 Review Short Vowels",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d45350974eeb8e00ce851.png"
+                },
+                {
+                    "id": "6284c1429827bb28d395106a",
+                    "name": "KLVN Phonics Showcase Level 1 Lesson 8 Short Words",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/623d451b9f5ecd25bbabd3d1.png"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "id": "dedfdb29-563a-4e98-a06b-fd14931f0db3",
+    "name": "Level 2",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 5-6",
+    "units": [
+        {
+            "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+            "name": "KLVN HMB Showcase",
+            "thumbnail": "",
+            "description": "",
+            "lesson_plans": [
+                {
+                    "id": "6266003ade5f8ba5afb05797",
+                    "name": "KLVN HMB Showcase Level 2 L1 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62660046c850260ac9db4381.png"
+                },
+                {
+                    "id": "6266006b514632be80608401",
+                    "name": "KLVN HMB Showcase Level 2 L2 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6266007cde5f8ba5afb057c4.png"
+                },
+                {
+                    "id": "626600af3c218adac3d4ff83",
+                    "name": "KLVN HMB Showcase Level 2 L3 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/626600bc3c218adac3d4ff90.png"
+                },
+                {
+                    "id": "626600d6de5f8ba5afb05805",
+                    "name": "KLVN HMB Showcase Level 2 L4 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/626600e426d38e691600562f.png"
+                },
+                {
+                    "id": "6266010226d38e6916005642",
+                    "name": "KLVN HMB Showcase Level 2 L5 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6266012726d38e6916005656.png"
+                },
+                {
+                    "id": "626601473c218adac3d4ffe0",
+                    "name": "KLVN HMB Showcase Level 2 L6 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62660153514632be80608497.png"
+                },
+                {
+                    "id": "6266016f26d38e6916005689",
+                    "name": "KLVN HMB Showcase Level 2 L7 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62660179c850260ac9db444c.png"
+                },
+                {
+                    "id": "6266019626d38e69160056ab",
+                    "name": "KLVN HMB Showcase Level 2 L8 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/626601a13c218adac3d50028.png"
+                },
+                {
+                    "id": "626601be514632be806084e4",
+                    "name": "KLVN HMB Showcase Level 2 L9 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/626601c9c850260ac9db4486.png"
+                },
+                {
+                    "id": "626601e8e471a9029839be09",
+                    "name": "KLVN HMB Showcase Level 2 L10 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/626601f33c218adac3d5005e.png"
+                },
+                {
+                    "id": "62660213e471a9029839be26",
+                    "name": "KLVN HMB Showcase Level 2 L11 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6266021ee471a9029839be2e.png"
+                },
+                {
+                    "id": "6266023af07b2a0d6f6a6701",
+                    "name": "KLVN HMB Showcase Level 2 L12 My Family",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62660247f07b2a0d6f6a670b.png"
+                },
+                {
+                    "id": "62660354c850260ac9db4557",
+                    "name": "KLVN HMB Showcase Level 2 L13 My Family Review",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62660361de5f8ba5afb0597c.png"
+                }
+            ]
+        }
+    ]
+}

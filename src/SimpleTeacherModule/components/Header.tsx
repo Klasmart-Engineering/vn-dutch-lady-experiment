@@ -51,7 +51,7 @@ const useStyles = makeStyles({
 		width: '100%',
 		top: 0,
 		left: 0,
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontWeight: 800,
 	},
 	unitBtn: {
@@ -110,7 +110,7 @@ export default function Header(props: Props) {
 			</BackButton>
 			{props.showTitle && (
 				<Box className={css.title}>
-					<Box className={css.unitBtn}>Lớp&nbsp;{query.get('level')}</Box>
+					<Box className={css.unitBtn}>Level&nbsp;{query.get('level')}</Box>
 					<Box className={css.skill}>{props.title}</Box>
 				</Box>
 			)}

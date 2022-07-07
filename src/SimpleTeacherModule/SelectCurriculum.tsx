@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     fontSize: vw(69),
     lineHeight: vw(86),
     paddingBottom: vw(54),
-    fontFamily: "Nunito, sans-serif",
+    fontFamily: "RooneySans, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -93,7 +93,7 @@ export default function SelectCurriculum() {
   return (
     <Box className={css.root}>
       <Typography className={css.title} variant="h3">
-        Chương trình Giáo dục Dinh dưỡng
+        Select your curriculum
       </Typography>
       <Box className={clsx(css.itemContainer, curriculumData.length === 4 && css.itemContainerWrap)}>
         {curriculumData.map(item => (

@@ -16,7 +16,7 @@ const useStyles = makeStyles({
 		display: 'flex',
 		justifyContent: 'flex-start',
 		flexFlow: 'row wrap',
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontWeight: 'bold',
 		fontVariantNumeric: 'lining-nums',
 		fontFeatureSettings: 'tnum',
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 		boxShadow: 'none',
 		backgroundColor: 'none',
 		borderColor: 'none',
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		transition: 'all 0.2s ease-in-out',
 		'&:hover': {
 			transform: 'scale(1.1)',
@@ -56,14 +56,14 @@ const useStyles = makeStyles({
 		backgroundColor: '#C4C4C4',
 	},
 	lessonNo: {
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		color: '#43A1FF',
 		fontWeight: 800,
 		fontSize: vw(24),
 		lineHeight: vw(30),
 	},
 	lessonDesp: {
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		marginTop: vw(10),
 		color: '#444444',
 		fontWeight: 500,
@@ -71,7 +71,7 @@ const useStyles = makeStyles({
 		lineHeight: vw(27),
 	},
 	title: {
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontWeight: 'bold',
 		color: '#333333',
 		fontSize: vw(27),
@@ -130,7 +130,7 @@ export default function LessonUnit(props: { list: IUnitState[] }) {
 										/>
 										<CardContent className={css.content}>
 											<Typography className={css.lessonNo}>
-												Bài {lessonItem.no}
+												Lesson {lessonItem.no}
 											</Typography>
 											<Typography className={css.lessonDesp} component='p'>
 												{lessonItem.name}

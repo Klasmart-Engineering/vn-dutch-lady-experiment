@@ -17,7 +17,7 @@ import vw from "./utils/vw.macro";
 const PAGESIZE = 5;
 const styleData = [
   {
-    color: "#19a0f4",
+    color: "#c572ff",
     top: vw(22),
   },
   {
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: vw(62),
-    fontFamily: "Nunito, sans-serif",
+    fontFamily: "rooneysansbold, sans-serif",
     color: "#fff",
   },
   itemContainer: {
@@ -125,7 +125,7 @@ const useStyles = makeStyles({
     lineHeight: vw(69),
     paddingTop: vw(20),
     textAlign: "center",
-    fontFamily: "Nunito Black, sans-serif",
+    fontFamily: "RooneySans-Black, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -140,7 +140,7 @@ const useStyles = makeStyles({
     lineHeight: vw(305),
     paddingTop: vw(36),
     textAlign: "center",
-    fontFamily: "Nunito, sans-serif",
+    fontFamily: "RooneySans, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -166,7 +166,7 @@ const useStyles = makeStyles({
     right: vw(32),
     fontSize: vw(42),
     lineHeight: vw(52),
-    fontFamily: "Nunito, sans-serif",
+    fontFamily: "RooneySans, sans-serif",
     fontWeight: 900,
     fontVariantNumeric: "lining-nums",
     fontFeatureSettings: "tnum",
@@ -216,16 +216,16 @@ function LessonItem(props: ILessonData & {index: number, page: number} ) {
       }}
     >
       <Box className={css.itemLeve} style={{ background: styleData[index].color }}>
-        <Typography className={css.itemLeveText1}>Lớp</Typography>
+        <Typography className={css.itemLeveText1}>Level</Typography>
         <Typography className={css.itemLeveText2}>{ (page - 1) * PAGESIZE + index + 1 }</Typography>
       </Box>
       <Box className={css.itemImg}>
         <img src={props.thumbnail} alt={String((page - 1) * PAGESIZE + index + 1)} />
       </Box>
 
-      {/* <Typography className={css.itemAge} style={{ color: styleData[index].color }}>
+      <Typography className={css.itemAge} style={{ color: styleData[index].color }}>
         {props.description}
-      </Typography> */}
+      </Typography>
     </IconButton>
   );
 }

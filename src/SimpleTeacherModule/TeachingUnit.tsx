@@ -22,11 +22,11 @@ const useStyles = makeStyles({
 		display: 'flex',
 		flexDirection: 'row',
 		justifyContent: 'flex-start',
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontWeight: 'bold',
 	},
 	teachingunit: {
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		display: 'flex',
 		width: vw(670),
 		height: vw(300),
@@ -51,7 +51,7 @@ const useStyles = makeStyles({
 		},
 	},
 	content: {
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		display: 'flex',
 		width: vw(300),
 		flexDirection: 'column',
@@ -68,7 +68,7 @@ const useStyles = makeStyles({
 		marginBottom: vw(5),
 	},
 	unitBtn: {
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontWeight: 800,
 		height: vw(35),
 		padding: `0 ${vw(10)}`,
@@ -80,14 +80,14 @@ const useStyles = makeStyles({
 	},
 	lessonNo: {
 		display: 'inline-block',
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontWeight: 800,
 		marginLeft: vw(16),
 		color: '#FFFFFF',
 		fontSize: vw(29),
 	},
 	lessonDesp: {
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontWeight: 700,
 		width: '100%',
 		marginTop: vw(20),
@@ -107,7 +107,7 @@ const IconButton = withStyles({
 		position: 'absolute',
 		bottom: vw(31),
 		left: vw(26),
-		fontFamily: 'Nunito',
+		fontFamily: 'RooneySans',
 		fontSize: vw(22),
 		fontWeight: 800,
 		display: 'flex',
@@ -164,8 +164,8 @@ export default function TeachingUnit(props: { list: LessonItem[] }) {
 								xs={12}
 								spacing={1}
 							>
-								<label className={css.unitBtn}>Lớp {item.unitNo}</label>
-								<span className={css.lessonNo}>Bài {item.no}</span>
+								<label className={css.unitBtn}>Unit {item.unitNo}</label>
+								<span className={css.lessonNo}>Lesson {item.no}</span>
 							</Grid>
 							<Typography className={css.lessonDesp} component='p'>
 								{item.name}
@@ -176,7 +176,7 @@ export default function TeachingUnit(props: { list: LessonItem[] }) {
 								}}
 							>
 								<span>
-									<span>Tiếp tục</span>
+									<span>Continue</span>
 									<img src={arrowBtn} alt='arrow' />
 								</span>
 							</IconButton>

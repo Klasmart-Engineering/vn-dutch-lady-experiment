@@ -1,5 +1,5 @@
 import axios from "axios";
-const basicPath = `${process.env.PUBLIC_URL}/dutch-lady`;
+const basicPath = `${process.env.PUBLIC_URL}/showcase`;
 
 type Params = { [key: string]: string };
 const generateURLParams = (params: Params): string => {

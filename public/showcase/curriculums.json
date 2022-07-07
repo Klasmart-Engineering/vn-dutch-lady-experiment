@@ -1,0 +1,28 @@
+[
+    {
+        "id": "623c03709f5ecd25bbab241e",
+        "name": "KLVN Maths Showcase",
+        "thumbnail": "https://beta.kidsloop.vn/wp-content/uploads/2022/06/math.png",
+        "description": "Math",
+        "levels": [
+            {
+                "id": "b20df2f3-16c0-4a37-81e2-290a3efdfb60",
+                "name": "Bada Rhyme",
+                "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+                "description": "Age 4-5"
+            },
+            {
+                "id": "dedfdb29-563a-4e98-a06b-fd14931f0db1",
+                "name": "Bada Genius",
+                "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-genius.c01c6e23.png",
+                "description": "Age 5-6"
+            },
+            {
+                "id": "7b715ba5-c181-45f5-92c7-f670338b4939",
+                "name": "Bada Talk",
+                "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-talk.0b432b3e.png",
+                "description": "Age 6-7"
+            }
+        ]
+    }
+]

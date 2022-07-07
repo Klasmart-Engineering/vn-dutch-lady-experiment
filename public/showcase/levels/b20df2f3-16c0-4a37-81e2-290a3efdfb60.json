@@ -1,0 +1,64 @@
+{
+    "id": "b20df2f3-16c0-4a37-81e2-290a3efdfb60",
+    "name": "Bada Rhyme",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 4-5",
+    "units": [
+        {
+            "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+            "name": "KLVN Maths Showcase",
+            "thumbnail": "",
+            "description": "",
+            "lesson_plans": [
+                {
+                    "id": "6284c3afd1b35f2bdd34ed5a",
+                    "name": "KLVN Maths Showcase Level 1 Lesson 1 Diagnostic Counting",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6241a985946cbd5a53558360.png"
+                },
+                {
+                    "id": "6284c3ed52c08c2215299c6d",
+                    "name": "KLVN Maths Showcase Level 1 Lesson 2 Meet the numbers",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/624137a5946cbd5a53552eb3.png"
+                },
+                {
+                    "id": "6284c42632ee9b2315c6351f",
+                    "name": "KLVN Maths Showcase Level 1 Lesson 3 Meet the numbers",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/624138b89f5ecd25bbada6b9.png"
+                },
+                {
+                    "id": "6284c44852c08c2215299cb9",
+                    "name": "KLVN Maths Showcase Level 1 Lesson 4 Meet the numbers",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/624138a60974eeb8e00eb669.png"
+                },
+                {
+                    "id": "6284c466741dc9108b0abb54",
+                    "name": "KLVN Maths Showcase Level 1 Lesson 5 Count the numbers",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6241388f9f5ecd25bbada681.png"
+                },
+                {
+                    "id": "6284c483f819817211db162a",
+                    "name": "KLVN Maths Showcase Level 1 Lesson 6 Count the numbers",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/624138749f5ecd25bbada661.png"
+                },
+                {
+                    "id": "6284c4a0d1b35f2bdd34ee11",
+                    "name": "KLVN Maths Showcase Level 1  Lesson 7 Count the numbers",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6241384a119c985a5f90f116.png"
+                },
+                {
+                    "id": "6284c4b99827bb28d3951302",
+                    "name": "KLVN Maths Showcase Level 1 Lesson 8 Recognise the objects",
+                    "description": "",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6241a15b119c985a5f913b10.png"
+                }
+            ]
+        }
+    ]
+}

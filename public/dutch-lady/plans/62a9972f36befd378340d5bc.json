@@ -1,0 +1,141 @@
+{
+    "id": "62a9972f36befd378340d5bc",
+    "name": "DL L\u1edbp 1 B\u00e0i 1 Th\u1ef1c ph\u1ea9m v\u00e0 nh\u00f3m th\u1ef1c ph\u1ea9m",
+    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62c2975056abfc3955b1c6c6.png",
+    "description": "H\u1ecdc sinh c\u00f3 th\u1ec3 n\u00eau t\u00ean m\u1ed9t s\u1ed1 th\u1ee9c \u0103n, \u0111\u1ed3 u\u1ed1ng gi\u00fap cho c\u01a1 th\u1ec3 kho\u1ebb m\u1ea1nh v\u00e0 hi\u1ec3u \u0111\u01b0\u1ee3c s\u1eefa l\u00e0 ngu\u1ed3n dinh d\u01b0\u1ee1ng quan tr\u1ecdng gi\u00fap b\u1ed5 sung c\u00e1c vi ch\u1ea5t c\u1ea7n thi\u1ebft",
+    "materials": [
+        {
+            "id": "62cd1b05c1cec6b611553b60",
+            "name": "Ch\u1ee7 \u0111\u1ec1 - EM T\u00ccM HI\u1ec2U TH\u1ef0C PH\u1ea8M V\u00c0 NH\u00d3M TH\u1ef0C PH\u1ea8M",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cd1b0ec1cec6b611553b6b.png",
+            "description": "",
+            "data": "{\"source\": \"https:\/\/cdn.kidsloop.vn\/assets\/62cd1b12fa6af31eeb15a2c1.png\", \"file_type\": 1, \"input_source\": 2}"
+        },
+        {
+            "id": "62a6ebd9e2dcbc04192558d0",
+            "name": "Introduction Video",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62a6abb081e064ba40ce9e8a.png",
+            "description": "",
+            "data": "{\"source\": \"assets\/62a69dcf6f1339995317d1a7.mp4\", \"file_type\": 2, \"input_source\": 2}"
+        },
+        {
+            "id": "62cd1b23c1cec6b611553b85",
+            "name": "Kh\u1edfi \u0111\u1ed9ng",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cd1b2b56abfc3955b66130.png",
+            "description": "",
+            "data": "{\"source\": \"https:\/\/cdn.kidsloop.vn\/assets\/62cd1b2ec1cec6b611553b94.png\", \"file_type\": 1, \"input_source\": 2}"
+        },
+        {
+            "id": "62b140b2e2dcbc04192a46c5",
+            "name": "DL Level 1 L1 LM1",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62a6ac07e2dcbc0419252e12.png",
+            "description": "",
+            "data": "{\"source\": \"assets\/62b140bfe2dcbc04192a46d8.mp4\", \"file_type\": 2, \"input_source\": 2}"
+        },
+        {
+            "id": "62c67a56c1cec6b61152632b",
+            "name": "DL Level 1 L1 LM2",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62a95f6658401968b2d1f790.png",
+            "description": "",
+            "data": "{\"source\": \"62c67a715c091186437d4996\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62cd1b3fc1cec6b611553bae",
+            "name": "Kh\u00e1m ph\u00e1",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cd1b46fa6af31eeb15a309.png",
+            "description": "",
+            "data": "{\"source\": \"https:\/\/cdn.kidsloop.vn\/assets\/62cd1b4a56abfc3955b66159.png\", \"file_type\": 1, \"input_source\": 2}"
+        },
+        {
+            "id": "62b9041236befd3783480627",
+            "name": "B\u00ed quy\u1ebft t\u1eeb C\u00f4 g\u00e1i H\u00e0 Lan - Video 1",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62b904a936befd378348066a.png",
+            "description": "",
+            "data": "{\"source\": \"assets\/62b90425e2dcbc04192ddbc3.mp4\", \"file_type\": 2, \"input_source\": 2}"
+        },
+        {
+            "id": "62cbf077c1cec6b61154b8ca",
+            "name": "DL Level 1 L1 LM3",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cbd02f56abfc3955b5ce00.png",
+            "description": "",
+            "data": "{\"source\": \"62cbf414c3e80d3d2e248165\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62cd1df9c1cec6b611553d5d",
+            "name": "DL Level 1 L1 LM4",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cd1f6556abfc3955b66395.png",
+            "description": "",
+            "data": "{\"source\": \"62cd1f31c3e80d3d2e24818c\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62cbe530fa6af31eeb151b55",
+            "name": "DL Level 1 L1 LM6",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cbe5b9fa6af31eeb151b92.png",
+            "description": "",
+            "data": "{\"source\": \"62cbe5886fb53e6284b4464d\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62cbd34a56abfc3955b5cfa4",
+            "name": "DL Level 1 L1 LM7",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cbd8d4c1cec6b61154aaf0.png",
+            "description": "",
+            "data": "{\"source\": \"62cbd883c3e80d3d2e24815c\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62cd1ad9fa6af31eeb15a28b",
+            "name": "Th\u1ef1c h\u00e0nh - V\u1eadn d\u1ee5ng",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cd1ae756abfc3955b660e1.png",
+            "description": "",
+            "data": "{\"source\": \"https:\/\/cdn.kidsloop.vn\/assets\/62cd1aecc1cec6b611553b45.png\", \"file_type\": 1, \"input_source\": 2}"
+        },
+        {
+            "id": "62cbd14556abfc3955b5ce7d",
+            "name": "DL Level 1 L1 LM5",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cbd154fa6af31eeb151078.png",
+            "description": "",
+            "data": "{\"source\": \"62cbd1606fb53e6284b4463e\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62ccdd6dfa6af31eeb15855c",
+            "name": "C\u00e1c b\u1eefa \u0103n ch\u00ednh - \u0110\u1ed3 \u0103n th\u1ee9c u\u1ed1ng",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62ccda03c1cec6b611551c48.png",
+            "description": "",
+            "data": "{\"source\": \"62ccde31c3e80d3d2e248170\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62cceba5c1cec6b61155249c",
+            "name": "Th\u00f3i quen \u0103n u\u1ed1ng h\u00e0ng ng\u00e0y",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62ccea7cc1cec6b611552410.png",
+            "description": "",
+            "data": "{\"source\": \"62ccebd706f737c120032902\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62a6b81e6f1339995317e4d5",
+            "name": "B\u00ed quy\u1ebft t\u1eeb C\u00f4 g\u00e1i H\u00e0 Lan - Video 2",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62a6b81b36befd37833f7201.png",
+            "description": "",
+            "data": "{\"source\": \"assets\/62a6b7c358401968b2d0b3e5.mp4\", \"file_type\": 2, \"input_source\": 2}"
+        },
+        {
+            "id": "62b58760e2dcbc04192c5748",
+            "name": "DL Level 1 L1 LM8",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62a6bb166f1339995317e922.png",
+            "description": "",
+            "data": "{\"source\": \"62b58776ffc3d81afae4eeb4\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62cd0c78c1cec6b611553429",
+            "name": "DL Level 1 L1 LM9",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62cd0c83fa6af31eeb159b88.png",
+            "description": "",
+            "data": "{\"source\": \"62cd0d0ec3e80d3d2e248189\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62a6bec236befd37833f7771",
+            "name": "Goodbye Video",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/62a6beba6f1339995317eb9c.png",
+            "description": "",
+            "data": "{\"source\": \"assets\/62a6be7536befd37833f774d.mp4\", \"file_type\": 2, \"input_source\": 2}"
+        }
+    ]
+}

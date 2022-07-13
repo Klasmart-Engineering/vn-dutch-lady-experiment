@@ -23,10 +23,9 @@ const useStyles = makeStyles({
 		cursor: 'pointer',
 	},
 	lessonunit: {
-		width: vw(320),
-		height: vw(312),
-		borderRadius: vw(32),
-		margin: `0 ${vw(31)} ${vw(38)} 0`,
+		width: `calc(1/6 * 100% - 20px)`,
+		borderRadius: `20px`,
+		margin: `0 20px 20px 0`,
 		boxShadow: 'none',
 		backgroundColor: 'none',
 		borderColor: 'none',

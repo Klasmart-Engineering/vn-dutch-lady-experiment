@@ -6,7 +6,7 @@ import vw from './utils/vw.macro';
 
 const useStyles = makeStyles({
 	lessonWrap: {
-		padding: `${vw(68)} 0 0 ${vw(40)}`,
+		padding: `40px 10px 0 20px`,
 		fontFamily: 'RooneySans',
 	},
 	teachingWrap: {

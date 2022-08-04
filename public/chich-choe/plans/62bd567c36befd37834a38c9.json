@@ -1,0 +1,64 @@
+{
+    "id": "62bd567c36befd37834a38c9",
+    "name": "[VV45] 4-5 | Unit A | Lesson 3",
+    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277eacbd1b35f2bdd2f3da0.jpg",
+    "description": "[Vietnam Value] 4-5 | Unit A | Lesson 3",
+    "materials": [
+        {
+            "id": "61e24185fd4ceb03710d209a",
+            "name": "[VN] Hoạt động vòng tròn",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/61e241d9692a006b3ddcd5a0.jpg",
+            "description": "",
+            "data": "{\"source\": \"https:\/\/cdn.kidsloop.vn\/assets\/61e241ed62424917ae50b818.jpg\", \"file_type\": 1, \"input_source\": 2}"
+        },
+        {
+            "id": "6277ea1cd1b35f2bdd2f3d4e",
+            "name": "4-5 | Recycle | Video | Lesson 3",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277e9e052c08c221523e92b.jpg",
+            "description": "4-5 | Recycle | Video | Lesson 3",
+            "data": "{\"source\": \"assets\/6277e9fb13d76c367d6d5418.mp4\", \"file_type\": 2, \"input_source\": 2}"
+        },
+        {
+            "id": "6277e8e313d76c367d6d5398",
+            "name": "4-5 | Unit A | Lesson 3 | Discussion Points",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277e89113d76c367d6d534d.jpg",
+            "description": "4-5 | Unit A | Lesson 3 | Discussion Points",
+            "data": "{\"source\": \"https:\/\/cdn.kidsloop.vn\/assets\/6277e8dc741dc9108b0508ff.jpg\", \"file_type\": 1, \"input_source\": 2}"
+        },
+        {
+            "id": "62bc0550e2dcbc04192f6b85",
+            "name": "[VV45] 4-5 | Unit A | L3 | A1",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277c9f0f819817211d4f6c5.jpg",
+            "description": "[Vietnam Value] 4-5 | Unit A | Lesson 3 | Activity 1",
+            "data": "{\"source\": \"6277cc0069f40c988376f305\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62bc0565985a87a5f4839b22",
+            "name": "[VV45] 4-5 | Unit A | L3 | A2",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277cd8ff819817211d4f861.jpg",
+            "description": "[Vietnam Value] 4-5 | Unit A | Lesson 3 | Activity 2",
+            "data": "{\"source\": \"6277d07b010831232b39b220\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62bc05a436befd3783499191",
+            "name": "[VV45] 4-5 | Unit A | L3 | A3",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277d18ff819817211d4fa10.jpg",
+            "description": "[Vietnam Value] 4-5 | Unit A | L3 | A3",
+            "data": "{\"source\": \"6277d43b010831232b39b221\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "62bc05c3985a87a5f4839b94",
+            "name": "[VV45] 4-5 | Unit A | L3 | Review",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277d4d0f819817211d4fb67.jpg",
+            "description": "[Vietnam Value] 4-5 | Unit A | Lesson 3 | Review",
+            "data": "{\"source\": \"6277d65f1ca8e6258c1c3a33\", \"file_type\": 5, \"input_source\": 1}"
+        },
+        {
+            "id": "6246c7c01224468ff40409be",
+            "name": "Goodbye slide - End of a lesson",
+            "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6246c78de471a902982c2dba.jpg",
+            "description": "necessary materials to create lesson plans",
+            "data": "{\"source\": \"https:\/\/cdn.kidsloop.vn\/assets\/6246c7bbf07b2a0d6f5cd75b.jpg\", \"file_type\": 1, \"input_source\": 2}"
+        }
+    ]
+}

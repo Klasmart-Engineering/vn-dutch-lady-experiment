@@ -1,0 +1,16 @@
+[
+    {
+        "id": "e94d814d-a1ff-4ad9-94f2-1c69620fbe36",
+        "name": "Chích Chòe",
+        "thumbnail": "https://beta.kidsloop.vn/wp-content/uploads/2022/06/chichchoe.png",
+        "description": "Chích Chòe",
+        "levels": [
+            {
+                "id": "d3a4590c-6cd0-4f38-8f6c-aab95ae85f6b",
+                "name": "Bài 1",
+                "thumbnail": "https://cms.kidsloop.vn/static/media/bada-rhyme.07b94224.png",
+                "description": "Age 4-5"
+            }
+        ]
+    }
+]

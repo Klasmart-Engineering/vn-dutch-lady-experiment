@@ -1,0 +1,22 @@
+{
+    "id": "d3a4590c-6cd0-4f38-8f6c-aab95ae85f6b",
+    "name": "Bài 1",
+    "thumbnail": "https://cms.alpha.kidsloop.net/static/media/bada-rhyme.07b94224.png",
+    "description": "Age 4-5",
+    "units": [
+        {
+            "id": "9e3c8d13-fa68-41ad-8592-a8ad7069365b",
+            "name": "Bài 1",
+            "thumbnail": "",
+            "description": "",
+            "lesson_plans": [
+                {
+                    "id": "62bd567c36befd37834a38c9",
+                    "name": "[VV45] 4-5 | Unit A | Lesson 3",
+                    "thumbnail": "https:\/\/cdn.kidsloop.vn\/thumbnail\/6277eacbd1b35f2bdd2f3da0.jpg",
+                    "description": "[Vietnam Value] 4-5 | Unit A | Lesson 3"
+                }
+            ]
+        }
+    ]
+}
